@@ -1,0 +1,7 @@
+to make the program run in terminal, please use the following commands at this directory
+
+java pgdp/threads/ChatServer
+java pgdp/threads/ChatClient
+
+OR:
+just use inteliji or eclipse and click "run" button...
