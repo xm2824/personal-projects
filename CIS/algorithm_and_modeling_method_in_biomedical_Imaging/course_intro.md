@@ -1,4 +1,4 @@
-## Algorithm and Modeling Method in Biomedical Imaging
+# Algorithm and Modeling Method in Biomedical Imaging
 
 - **Course Background**
 
