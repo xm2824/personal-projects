@@ -134,7 +134,7 @@ def _expandingArr(img):
                                                                                      expand the array ,since we delete all the
                                                                                      expanded pixel values
 
-    :param img: a 3D array ,elements can be accessed with img[x,y,colorChannel], colorChannel:{0:'R',1:'G',2:'B'}
+    :param img: a 3D array ,elements can be accessed with img[index,value,colorChannel], colorChannel:{0:'R',1:'G',2:'B'}
     :return: the expanded 3D array
     '''
     arr=np.zeros((len(img)+2,len(img[0])+2,len(img[0][0]))).astype(int)        # initiate a 3D array with 2 more rows and columns
@@ -188,7 +188,7 @@ def _rescalingLinear(value):
         the actual value range of _calculate(...) is [-1020,1020],
         and the expected value range is [0,255]
         we define a function r to rescale the value:
-        r : [-1020,1020] -> [0,255] , x -> (x+1020)/8
+        r : [-1020,1020] -> [0,255] , index -> (index+1020)/8
 
         :param value: actual calculated value
         :return: rescaled value

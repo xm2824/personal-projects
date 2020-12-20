@@ -183,7 +183,7 @@ print('---parsing---')
 #print(mathParser(''))
 t='f(3)'
 
-#mathParser('f:x->x+2')
+#mathParser('f:index->index+2')
 #print(functions)
 
 #print(_isFunctionCall(t))

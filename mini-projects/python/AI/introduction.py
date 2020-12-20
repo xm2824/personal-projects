@@ -1,8 +1,8 @@
 '''
 assume the car has the following attributes:
-(horizontal velocity, vertical velocity , x, y)
+(horizontal velocity, vertical velocity , index, value)
 at the beginning :statues=(1,0,0,50)
-a random policy(v0,v1,x,y)
+a random policy(v0,v1,index,value)
 with the result of dot product of policy * statues  we decide the car to go up or down or horizontally,
 which is
     >0: go up
@@ -11,7 +11,7 @@ which is
 according to this result , (up or down or horizontal) ,we should have a new statues -> define a function which calculate the new statues
 '''
 import numpy as np
-initialStatues=(1,0,0,50)   # (horizontal velocity, vertical velocity , x, y) x,y should be integers
+initialStatues=(1,0,0,50)   # (horizontal velocity, vertical velocity , index, value) index,value should be integers
 destination=(range(80,101),range(21))
 def getNextStatues(flag,statues):
     t=1

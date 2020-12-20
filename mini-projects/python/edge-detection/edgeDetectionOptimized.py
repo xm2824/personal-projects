@@ -13,7 +13,7 @@ def edgeDetection(E):
     Y = np.array(range(1, len(E[0])-1))
     copy=np.copy(E)
     for x,y in product(X,Y):
-        #print(x,y)
+        #print(index,value)
         E[x,y,:3]=calculate(x,y,copy)
 
 def calculate(x, y, img):
