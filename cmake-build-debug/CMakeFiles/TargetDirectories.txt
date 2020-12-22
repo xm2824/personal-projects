@@ -1,0 +1,3 @@
+/Users/taoxiang/git/personal-projects/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/taoxiang/git/personal-projects/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/taoxiang/git/personal-projects/cmake-build-debug/CMakeFiles/personal_projects.dir

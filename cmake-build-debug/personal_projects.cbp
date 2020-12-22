@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="personal_projects"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/taoxiang/git/personal-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/taoxiang/git/personal-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/taoxiang/git/personal-projects/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="personal_projects">
+				<Option output="/Users/taoxiang/git/personal-projects/cmake-build-debug/personal_projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taoxiang/git/personal-projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/taoxiang/git/personal-projects/mini-projects/c&amp;c++/homework_reminder"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/mpi/assignment8"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/mpi/assignment9"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 personal_projects"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="personal_projects/fast">
+				<Option output="/Users/taoxiang/git/personal-projects/cmake-build-debug/personal_projects" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/taoxiang/git/personal-projects/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/taoxiang/git/personal-projects/mini-projects/c&amp;c++/homework_reminder"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/mpi/assignment8"/>
+					<Add directory="/Users/taoxiang/git/personal-projects/uni-projects/mpi/assignment9"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 personal_projects/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/taoxiang/git/personal-projects/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/taoxiang/git/personal-projects/leetcode/387. First Unique Character in a String.cpp">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/mini-projects/c&amp;c++/OOP/string.cpp">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/mini-projects/c&amp;c++/homework_reminder/helper.h">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/mini-projects/c&amp;c++/homework_reminder/impl.cpp">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/common.c">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/common.h">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/io.c">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/io.h">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/laplace.h">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/main.c">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/uni-projects/EdgeDetection-team181/Implementierung/src/c/test.c">
+			<Option target="personal_projects"/>
+		</Unit>
+		<Unit filename="/Users/taoxiang/git/personal-projects/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
