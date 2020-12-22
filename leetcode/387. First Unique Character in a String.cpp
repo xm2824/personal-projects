@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 class Solution {
 public:
@@ -11,7 +12,7 @@ public:
     }
 
     char rec(string s1){
-        cout<<s1<<endl;
+        
         if (s1 == "" ){
             return '.';
         } else if (s1.size()==1) return s1[0];
@@ -23,13 +24,9 @@ public:
             return peek;
         }
         else   {
-            replace(rest.begin(),rest.end(),peek,(char)0);
+           rest.erase(std::remove(rest.begin(), rest.end(), peek), rest.end());
             return rec(rest);
         }
     }
 };
 
-int main (){
-    Solution a;
-    a.firstUniqChar("dddccdbba");
-}
