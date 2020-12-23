@@ -48,3 +48,9 @@ class Solution:
             
 
         return sum(ret)
+
+
+'''
+#* recommended idea to solve the problem
+https://leetcode-cn.com/problems/candy/solution/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/
+'''
