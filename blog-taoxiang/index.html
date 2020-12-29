@@ -1,208 +1,243 @@
-<!doctype html>
-<html lang="en">
-  <head>
-  	<title>AI In Ephemeral</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2591/2591910.svg">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
+<title>AI In Ephemeral</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2591/2591910.svg">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    .cursive{font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;}
+    .text_grey{color: #797979}
+    p.poem { font-family: Papyrus, fantasy; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+    p.title{font-weight: 900;font-family:Arial, sans-serif, monospace;font-size: large;margin-top: 10px;}
+    p.title:hover{text-decoration: underline}
+    a.title{color: black}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-      <style>
-          p.redText{
-              color: #ff305d;
-          }
-          ul#share li{display: inline;}
-          div.small_text_inline{
-              font-size: 80%;
-              display: inline;
-          }
-          h2.center{
-              text-align: center;
-          }
-
-          button.like {
-              background-image: url(images/like.svg);
-              background-size: contain;
-              border: none;
-              border-radius: 50%;
-              width: 50px;
-              height: 50px;
-              font-size: 2rem;
-          }
-      </style>
-
-      <script>
-          function add_likes(){
-              var a = localStorage.getItem("num_likes");
-              if (a == null){
-                  a = 1;
-                  localStorage.setItem("num_likes",a.toString())
-              }else{
-                  a = parseInt(a)+1
-                  localStorage.setItem("num_likes",a.toString())
-              }
-              document.getElementById("nums_likes_disp").innerHTML =a.toString()+" likes" ;
-          }
-
-          function show_num_likes(){
-              var a =localStorage.getItem("num_likes");
-              if (a==null){
-                  a = 0;
-              }
-              document.getElementById("nums_likes_disp").innerHTML = a.toString()+" likes";
-          }
-      </script>
-  </head>
-  <body onload="show_num_likes()">
-
-		<div class="container d-md-flex align-items-stretch">
-      <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
-
-          <!-- Share Box -->
-          <div class="share-box" aria-hidden="true" align="right">
-              <ul id="share" class="share">
-                  <li><a href="https://twitter.com/intent/tweet?url=https://yunshu67.github.io/blog-taoxiang/&text=Tao's%20blogs" target="_blank" rel="noopener" class="share-btn-twitter"><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="https://www.facebook.com/sharer.php?u=https://yunshu67.github.io/blog-taoxiang/&amp;t=Tao's%20blogs" target="_blank" rel="noopener" class="share-btn-facebook"><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="mailto:?subject=Tao's%20blogs&amp;body=https://yunshu67.github.io/blog-taoxiang/" target="_blank" rel="noopener" class="share-btn-email"><i class="fas fa-envelope"></i></a></li>
-                  <li><a href="https://www.linkedin.com/shareArticle?url=https://yunshu67.github.io/blog-taoxiang/&amp;title=Tao's%20blogs" target="_blank" rel="noopener" class="share-btn-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                  <li><a href="whatsapp://send?text=Tao's%20blogs%20https://yunshu67.github.io/blog-taoxiang/" target="_blank" rel="noopener" class="share-btn-whatsapp"><i class="fab fa-whatsapp"></i></a></li>
-                  <li><a href="https://service.weibo.com/share/share.php?url=https://yunshu67.github.io/blog-taoxiang/&amp;title=Tao's%20blogs" target="_blank" rel="noopener" class="share-btn-weibo"><i class="fab fa-weibo"></i></a></li>
-                  <li>
-
-                      <a id="wx" class="dropup share-btn-weixin" href="javascript:">
-                          <i class="fab fa-weixin" data-toggle="dropdown"></i>
-                          <div class="dropdown-menu" style="width: 150px; margin-right: auto;margin-left: auto">
-                              <div class="small_text_inline">用手机打开微信扫一扫分享</div>
-                              <img src="images/blog-homepage.png" width="148">
-                          </div>
-                      </a>
-                      </a>
-                  </li>
-
-
-              </ul></div>
-
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" align="right" width="20%"><br>
-          <h2>Hi there 👋 </h2><hr>
-
-          <p>  I'm Tao Xiang – a humble man – you can call me Jonathan. I'm a CS student at Technical University Munich, an independent researcher and a curious learner about everything.</p><br>
-          <h4>Get in touch</h4>
-          <a href="https://yunshu.me/" target="_blank"> <img src="https://ws-icons.thanhd.com/i/link.svg" align="left" alt="Personal site" style="margin-right: 5px" width="22px"></a>
-          <a href="https://www.linkedin.com/in/yunshu86/" target="_blank"> <img src="https://ws-icons.thanhd.com/bsp/linkedin.svg" align="left" alt="LinkedIn" style="margin-right: 1px" width="22px"></a>
-          <a href="https://www.jianshu.com/u/00c25cdda9a1" target="_blank"> <img src="images/jianshu.png" align="left" alt="Jianshu" width="45px"></a>
-          <a href="https://github.com/yunshu67" target="_blank"><img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111432.svg" alt="Github" style="margin-right: 5px" width="18px"></a>
-
-          <br><br>
-          <h4>Sponsor me</h4>
-          <a href="https://paypal.me/taoxiang666?locale.x=en_US" target="_blank">
-              <img src="https://img.shields.io/static/v1?label=Sponsor&message=Paypal&logo=Paypal&labelColor=424242&link=%3Curl%3E&color=d1c7ab&style=flat-square&logoColor=ffffff" style="margin-right: 10px">
-          </a>
-
-          <a  class="dropdown" href="javascript:">
-              <img data-toggle="dropdown" src="https://www.flaticon.com/svg/static/icons/svg/732/732158.svg" width="22px" title="微信赞赏" style="margin-right: 10px">
-              <div class="dropdown-menu">
-                  <img src="images/sponsor-weixin.jpg" width="330">
-              </div>
-          </a>
-
-          <div  style="margin-top: 200px;text-align: center ">
-              <button class="like" type="submit" onclick="add_likes()"></button>
-              <p class="redText" id="nums_likes_disp"></p>
-              </div>
-
-      </div>
-
-
-
-      <nav id="sidebar">
-				<div class="p-4 pt-5">
-					<h5>Overview</h5>
-	        <ul class="list-unstyled components mb-5">
-                <li>
-                    <a href="#"   >Home</a>
-                </li>
-	          <li>
-	            <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Articles</a>
-	            <ul class="collapse list-unstyled" id="pageSubmenu1">
-	            </ul>
-	          </li>
-	          <li>
-	            <a id="notes" href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Notes</a>
-	            <ul class="collapse list-unstyled" id="pageSubmenu2">
-
-                <li><a href="#geo_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Geo</a>
-                    <ul class="collapse list-unstyled" id="geo_notes">
-
-                    </ul>
-                </li>
-
-                 <li><a href="#alg_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Algorithms</a>
-                     <ul class="collapse list-unstyled" id="alg_notes">
-                         <li><a href="notes/algorithms/preSum.html" target="_blank"><span class="fa fa-chevron-right mr-2"></span>0.preSum 前缀和</a></li>
-                         <li><a href="notes/algorithms/slidingWindow.html" target="_blank"><span class="fa fa-chevron-right mr-2"></span>1.sliding window 滑动窗口</a></li>
-                         <li><a href="notes/algorithms/dynamicProgramming.html" target="_blank"><span class="fa fa-chevron-right mr-2"></span>2.dynamic programming 动态规划</a> </li>
-                     </ul>
-
-                 </li>
-
-                    <li><a href="#chs_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Cheatsheets</a>
-                        <ul class="collapse list-unstyled" id="chs_notes">
-                            <li><a href="https://cheatography.com/xys/cheat-sheets/python/" target="_blank"><span class="fa fa-chevron-right mr-2"></span>Python</a></li>
-                            <li><a href="https://cheatography.com/xys/cheat-sheets/java/" target="_blank"><span class="fa fa-chevron-right mr-2"></span>Java</a></li>
-                            <li><a href="https://cheatography.com/xys/cheat-sheets/html/" target="_blank"><span class="fa fa-chevron-right mr-2"></span>HTML</a></li>
-
-
+<!-- Sidebar/menu -->
+<nav  class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+    <div class="w3-container">
+        <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <img src="images/avatar.jpeg" style="width:45%;" class="w3-round"><br><br>
+        <h4><b>Tao Xiang</b></h4>
+        <p class="w3-text-grey">Technical University Munich</p>
+    </div>
+        <nav id="sidebar">
+            <div style="padding-left: 5px" >
+                <ul class="list-unstyled components mb-5" style="padding-top: 0;margin-top: 0">
+                    <li>
+                        <a href="#" class="w3-bar-item  w3-button  w3-text-teal" style="text-align: left" ><i class="fas fa-home"></i>&nbsp; Home</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button" style="text-align: left"><i class="fas fa-book-open"></i>&nbsp; Articles</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu1">
                         </ul>
                     </li>
+                    <li>
+                        <a id="notes" href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button" style="text-align: left"><i class="fas fa-sticky-note"></i>&nbsp;&nbsp; Notes</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu2">
 
+                            <li><a href="#geo_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button">Geo</a>
+                                <ul class="collapse list-unstyled" id="geo_notes">
 
+                                </ul>
+                            </li>
 
-	            </ul>
-	          </li>
-	          <li>
-	            <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Essays</a>
-	            <ul class="collapse list-unstyled" id="pageSubmenu3">
-                    <li><a href=essays/12-27-2020.html><span class="fa fa-chevron-right mr-2"></span>Dec 27th, 2020</a></li>
-	            </ul>
-	          </li>
-	        </ul>
-					<div class="mb-5">
-						<h5>Recent Posts</h5>
-            <div class="tagcloud">
-                <a href="essays/12-27-2020.html" class="tag-cloud-link">Dec 27th</a>
-              <a href="notes/algorithms/slidingWindow.html" class="tag-cloud-link">滑动窗口</a>
-              <a href="notes/algorithms/dynamicProgramming.html" class="tag-cloud-link">动态规划</a>
-              <a href="notes/algorithms/preSum.html" class="tag-cloud-link">前缀和</a>
-
-
+                            <li><a href="#alg_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button">Algorithms</a>
+                                <ul class="collapse list-unstyled" id="alg_notes">
+                                    <li><a href="notes/algorithms/preSum.html" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>0.preSum 前缀和</a></li>
+                                    <li><a href="notes/algorithms/slidingWindow.html" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>1.sliding window 滑动窗口</a></li>
+                                    <li><a href="notes/algorithms/dynamicProgramming.html" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>2.dynamic programming 动态规划</a> </li>
+                                </ul>
+                            </li>
+                            <li><a href="#chs_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button">Cheatsheets</a>
+                                <ul class="collapse list-unstyled" id="chs_notes">
+                                    <li><a href="https://cheatography.com/xys/cheat-sheets/python/" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>Python</a></li>
+                                    <li><a href="https://cheatography.com/xys/cheat-sheets/java/" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>Java</a></li>
+                                    <li><a href="https://cheatography.com/xys/cheat-sheets/html/" class="w3-bar-item  w3-button"style="text-align: left"  target="_blank"><span class="fa fa-chevron-right mr-2"></span>HTML</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button" style="text-align: left"><i class="fas fa-book"></i>&nbsp;  Essays</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu3">
+                            <li><a href=essays/12-27-2020.html target="_self" class="w3-bar-item  w3-button"style="text-align: left" ><span class="fa fa-chevron-right mr-2"></span>Dec 27th, 2020</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="about.html" class="w3-bar-item  w3-button" style="text-align: left" target="_self" ><i class="fas fa-address-card"></i>&nbsp; About Me</a>
+                    </li>
+                </ul>
             </div>
-					</div>
-					<div class="mb-5">
-	        	<h5>给我留言吧</h5>
-						<form action="#" class="subscribe-form">
-	            <div class="form-group d-flex">
-	            	<div class="icon"><span class="icon-paper-plane"></span></div>
-	              <input type="text" class="form-control" placeholder="同学，说点什么吧">
-	            </div>
-	          </form>
-					</div>
-                 </div>
-    	</nav>
+        </nav>
+</nav>
 
-		</div>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+    <!-- Header -->
+    <header id="portfolio">
+        <a href="#"><img src="images/avatar.jpeg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+        <div class="w3-container">
+            <div class="w3-section w3-bottombar w3-padding-16">
+                <h2><b>FIRST IMPRESSION</b></h2>
+                <button id="fi0" class="w3-button w3-black" onclick="filter_focus(this.id);filter_all()" >ALL</button>
+                <button id="fi1" class="w3-button w3-white" onclick="filter_focus(this.id);filter_2020()"><i class="fas fa-gem w3-margin-right" ></i>Best 2020</button>
+                <button id="fi2" class="w3-button w3-white w3-hide-small" onclick="filter_focus(this.id);filter_life()"><i class="fas fa-skiing w3-margin-right"></i>Life</button>
+<!--                <button id="fi3" class="w3-button w3-white w3-hide-small" onclick="filter_focus(this.id)"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>-->
+            </div>
+        </div>
+    </header>
+
+    <!-- First Photo Grid-->
+    <div id="s-all" class="w3-row-padding">
+        <div id="s0" class="w3-third w3-container w3-margin-bottom">
+            <a href="#"><img src="images/AI.jpeg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
+            <div class="w3-container w3-white">
+                <a class="title" href="#"><p class="title " >AI IN EPHEMERAL BLOG</p>
+                </a>
+                <p class="text_grey">My first website!</p>
+            </div>
+        </div>
+        <div id="s1" class="w3-third w3-container w3-margin-bottom">
+            <a href="https://leetcode-cn.com/u/yunshu67/" target="_blank"><img src="images/lc.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"></a>
+            <div class="w3-container w3-white">
+                <a href="https://leetcode-cn.com/u/yunshu67/" target="_blank" class="title"><p class="title">LEETCODE</p></a>
+                <p class="text_grey">Dreaming of being an Algorithmer!<br>
+                    <a href="notes/algorithms/preSum.html" class="text_grey">1) preSum</a><br>
+                    <a href="notes/algorithms/slidingWindow.html" class="text_grey">2) sliding window</a><br>
+                    <a href="notes/algorithms/dynamicProgramming.html" class="text_grey">3) dynamic programming</a>
+
+                </p>
+            </div>
+        </div>
+        <div id="s2" class="w3-third w3-container">
+            <img src="images/life.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+                <p class="cursive" style="text-align: center"><b>Love In Nha Trang</b></p>
+                <p class="poem text_grey">We are still kids, but we're so in love</p>
+                <p class="poem text_grey">Fighting against all odds</p>
+                    <p class="poem text_grey">I know we'll be alright this time</p>
+                    <p class="poem text_grey" style="margin-bottom: 5px">Darling, just hold my hand</p>
+                    <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Photo Grid-->
+<!--    <div class="w3-row-padding">-->
+<!--        <div class="w3-third w3-container w3-margin-bottom">-->
+<!--            <img src="https://www.w3schools.com/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">-->
+<!--            <div class="w3-container w3-white">-->
+<!--                <p><b>Lorem Ipsum</b></p>-->
+<!--                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="w3-third w3-container w3-margin-bottom">-->
+<!--            <img src="https://www.w3schools.com/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">-->
+<!--            <div class="w3-container w3-white">-->
+<!--                <p><b>Lorem Ipsum</b></p>-->
+<!--                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="w3-third w3-container">-->
+<!--            <img src="https://www.w3schools.com/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">-->
+<!--            <div class="w3-container w3-white">-->
+<!--                <p><b>Lorem Ipsum</b></p>-->
+<!--                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">&laquo;</a>
+            <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+            <a href="#" class="w3-bar-item w3-button w3-hover-black">&raquo;</a>
+        </div>
+    </div>
 
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+
+
+
+
+
+    <!-- End page content -->
+</div>
+
+<script>
+    // var to store which one is checked in filter
+    var checked="fi0";
+    var showList1 = document.getElementById('s-all');
+    var removed=[];
+
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+    function filter_focus(id){
+        document.getElementById(checked).classList.remove('w3-black');
+        document.getElementById(checked).classList.add('w3-white')
+
+        document.getElementById(id).classList.remove('w3-white');
+        document.getElementById(id).classList.add('w3-black');
+        checked=id;
+    }
+    function filter_life(){
+        filter_all();
+        removeElement('s0');
+        removeElement('s1')
+    }
+
+    function filter_all(){
+        for (let i = 0; i < removed.length; i++) {
+            showList1.appendChild(removed[i]);
+        }
+    }
+
+    function removeElement(id) {
+        var elem = document.getElementById(id);
+        var ret= elem.parentNode.removeChild(elem);
+        removed.push(ret);
+        return ret;
+    }
+    function filter_2020(){
+        filter_all();
+        removeElement('s2');
+    }
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
 </html>
