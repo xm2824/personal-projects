@@ -8,8 +8,11 @@
             margin: 0;
             padding: 0;
         }
+        body,html{
+            height: 100%;
+        }
         ul{
-            height: 400px;
+            height: 100%;
             background-color: skyblue;
             margin-top: 100px;
             animation: change 5s linear 0s infinite alternate;
@@ -23,18 +26,19 @@
             position: absolute;
             left: 0;
             top: 0;
+            background-size: contain;
         }
         ul li:nth-child(1){
             background-image: url("images/cloud_one.png");
-            animation: one 30s linear 0s infinite alternate;
+            animation: one 30s linear 0s infinite normal;
         }
         ul li:nth-child(2){
             background-image: url("images/cloud_two.png");
-            animation: two 30s linear 0s infinite alternate;
+            animation: two 30s linear 0s infinite normal;
         }
         ul li:nth-child(3){
             background-image: url("images/cloud_three.png");
-            animation: three 30s linear 0s infinite alternate;
+            animation: three 30s linear 0s infinite normal;
         }
         @keyframes change {
             from{
@@ -46,26 +50,26 @@
         }
         @keyframes one {
             from{
-                margin-left: 0;
+                margin-left: -100%;
             }
             to{
-                margin-left: -100%;
+                margin-left: 0%;
             }
         }
         @keyframes two {
             from{
-                margin-left: 0;
+                margin-left: -200%;
             }
             to{
-                margin-left: -200%;
+                margin-left: 0;
             }
         }
         @keyframes three {
             from{
-                margin-left: 0;
+                margin-left: -300%;
             }
             to{
-                margin-left: -300%;
+                margin-left: 0;
             }
         }
     </style>
