@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- TODO -->
-    <base href="../">
-
     <title>AI In Ephemeral</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3_updated.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/2591/2591910.svg">
@@ -16,42 +14,39 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <style>
-        p.redText{
-            color: #ff305d;
-        }
-        ul#share li{display: inline;}
-        div.small_text_inline{
-            font-size: 80%;
-            display: inline;
-        }
-        h2.center{
-            text-align: center;
-        }
 
-
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+        .cursive{font-family:'Monotype Corsiva','Apple Chancery','ITC Zapf Chancery','URW Chancery L',cursive;}
+        .text_grey{color: #797979}
+        p.poem { font-family: Papyrus, fantasy; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+        .title{font-weight: 900;font-family:Arial, sans-serif, monospace;font-size: large;margin-top: 10px;}
+        .title:hover{text-decoration: underline}
+        .title{color: black}
+        .side{
+            border-style: none;
+            border-color: white;
+            position: relative;
+            top: -43px;
+            left: 30px;
+        }
+        .side ul{
+            list-style: none;
+        }
+        .side ul li {
+            margin-right: 5px;
+            float: left;
+        }
+        .side ul li a {
+            font-size: 20px;
+            color: rgba(0,0,0,0.85);
+            transition-property: font-size;
+            transition-duration: 0.25s;
+        }
+        .side ul li a:hover{
+            font-size: 28px;
+            color: black;
+        }
     </style>
-
-    <script>
-        function add_likes(){
-            var a = localStorage.getItem("num_likes");
-            if (a == null){
-                a = 1;
-                localStorage.setItem("num_likes",a.toString())
-            }else{
-                a = parseInt(a)+1
-                localStorage.setItem("num_likes",a.toString())
-            }
-            document.getElementById("nums_likes_disp").innerHTML =a.toString()+" likes" ;
-        }
-
-        function show_num_likes(){
-            var a =localStorage.getItem("num_likes");
-            if (a==null){
-                a = 0;
-            }
-            document.getElementById("nums_likes_disp").innerHTML = a.toString()+" likes";
-        }
-    </script>
 </head>
 <body onload="show_num_likes()">
 <!-- Sidebar/menu -->
@@ -62,13 +57,15 @@
         </a>
         <img src="images/avatar.jpeg" style="width:45%;" class="w3-round"><br><br>
         <h4><b>Tao Xiang</b></h4>
-        <p class="w3-text-grey">Technical University Munich</p>
+        <p class="w3-text-grey">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Logo_of_the_Technical_University_of_Munich.svg" style="float: right" width="20%">
+            Technical University Munich</p>
     </div>
     <nav id="sidebar">
         <div style="padding-left: 5px" >
             <ul class="list-unstyled components mb-5" style="padding-top: 0;margin-top: 0">
                 <li>
-                    <a href="index.html" class="w3-bar-item  w3-button" style="text-align: left" ><i class="fas fa-home"></i>&nbsp; Home</a>
+                    <a href="#" class="w3-bar-item  w3-button  w3-text-teal" style="text-align: left" ><i class="fas fa-home"></i>&nbsp; Home</a>
                 </li>
                 <li>
                     <a href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button" style="text-align: left"><i class="fas fa-book-open"></i>&nbsp; Articles</a>
@@ -81,6 +78,7 @@
 
                         <li><a href="#geo_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button">Geo</a>
                             <ul class="collapse list-unstyled" id="geo_notes">
+                                <li><a href="https://github.com/yunshu67/markdowns/blob/master/Geo/Geo%20notes.md" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>0. Geo Notes</a></li>
 
                             </ul>
                         </li>
@@ -103,9 +101,9 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button w3-text-teal" style="text-align: left"><i class="fas fa-book"></i>&nbsp;  Essays</a>
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button" style="text-align: left"><i class="fas fa-book"></i>&nbsp;  Essays</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu3">
-                        <li><a href="javascript:" target="_self" class="w3-bar-item  w3-button"style="text-align: left" ><span class="fa fa-chevron-right mr-2"></span>Dec 27th, 2020</a></li>
+                        <li><a href=essays/12-27.html target="_self" class="w3-bar-item  w3-button" style="text-align: left" ><span class="fa fa-chevron-right mr-2"></span>Dec 27th, 2020</a></li>
                     </ul>
                 </li>
                 <li>
@@ -114,6 +112,34 @@
             </ul>
         </div>
     </nav>
+    <!-- Sidebar/share -->
+    <div class="side">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/yunshu86/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            <li>
+                <a  class="dropright share-btn-weixin" href="javascript:">
+                    <i class="fab fa-weixin" data-toggle="dropdown"></i>
+                    <div class="dropdown-menu" style="width: 150px;text-align: center">
+                        <div class="small_text_inline">扫一扫加我好友</div>
+                        <img src="images/wechat.jpg" width=100%>
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <a  class="dropright share-btn-weixin" href="javascript:">
+                    <i class="fab fa-whatsapp" data-toggle="dropdown"></i>
+                    <div class="dropdown-menu" style="width: 250px;text-align: center">
+                        <img src="images/whatsapp.png" width=100%>
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <a href="https://t.me/yunshu67" target="_blank" ><i class="fab fa-telegram"></i></a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->

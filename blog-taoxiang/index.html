@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html>
+<head>
 <title>AI In Ephemeral</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,7 +47,8 @@
         color: black;
     }
 </style>
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+</head>
+<body class="w3-light-grey w3-content" style="max-width:3500px">
 
 
 
@@ -79,6 +81,7 @@
 
                             <li><a href="#geo_notes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle w3-bar-item  w3-button">Geo</a>
                                 <ul class="collapse list-unstyled" id="geo_notes">
+                                    <li><a href="https://github.com/yunshu67/markdowns/blob/master/Geo/Geo%20notes.md" class="w3-bar-item  w3-button" style="text-align: left" target="_blank"><span class="fa fa-chevron-right mr-2"></span>0. Geo Notes</a></li>
 
                                 </ul>
                             </li>
@@ -136,7 +139,7 @@
 
             </li>
             <li>
-                <a href="javascript:" target="_self" ><i class="fas fa-thumbs-up"></i></a>
+                <a href="https://t.me/yunshu67" target="_blank" ><i class="fab fa-telegram"></i></a>
             </li>
         </ul>
     </div>
@@ -205,10 +208,24 @@
 <!--     Second Photo Grid-->
     <div class="w3-row-padding" >
         <div class="w3-third w3-container w3-margin-bottom" id="s3">
-            <a href="https://cheatography.com/xys/cheat-sheets/python/"><img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" class="w3-hover-opacity"></a>
+            <a href="https://cheatography.com/xys/cheat-sheets/python/" target="_blank"><img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" class="w3-hover-opacity"></a>
             <div class="w3-container w3-white">
                 <a href="https://cheatography.com/xys/cheat-sheets/python/" target="_blank"><p class="title">PYTHON CHEATSHEET</p></a>
                 <p class="text_grey">My python summary</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom" id="s4">
+            <a href="https://yunshu67.github.io/blog-taoxiang/notes/cheatsheets/css.html" target="_blank"><img src="images/dog1.png" style="width:100%" class="w3-hover-opacity"></a>
+            <div class="w3-container w3-white">
+                <a href="https://yunshu67.github.io/blog-taoxiang/notes/cheatsheets/css.html" target="_blank"><p class="title">CSS CHEATSHEET</p></a>
+                <p class="text_grey">My CSS summary (ZH)</p>
+            </div>
+        </div>
+        <div class="w3-third w3-container w3-margin-bottom" id="s5">
+            <a href="https://github.com/yunshu67/markdowns/blob/master/Geo/Geo%20notes.md" target="_blank"><img src="images/cat1.png" style="width:100%" class="w3-hover-opacity"></a>
+            <div class="w3-container w3-white">
+                <a href="https://github.com/yunshu67/markdowns/blob/master/Geo/Geo%20notes.md" target="_blank"><p class="title">GEO NOTES</p></a>
+                <p class="text_grey">Notes of course: Geometriekalküle [MA2203]</p>
             </div>
         </div>
 
@@ -266,7 +283,7 @@
 <script>
     // var to store which one is checked in filter
     var checked="fi0";
-    const node_ids = ['s0','s1','s2','s3'];
+    const node_ids = ['s0','s1','s2','s3','s4','s5'];
 
     // Script to open and close sidebar
     function w3_open() {
@@ -292,6 +309,8 @@
         setHidden('s0');
         setHidden('s1')
         setHidden('s3')
+        setHidden('s4');
+        setHidden('s5');
 
     }
 
@@ -307,7 +326,7 @@
     function setVisible(id){document.getElementById(id).style.display="block";}
     function filter_2020(){
         setVisible('s0');setVisible('s1');
-        setHidden('s2');setHidden('s3')
+        setHidden('s2');setHidden('s3');setHidden('s4');setHidden('s5');
     }
 </script>
 <script src="js/jquery.min.js"></script>
@@ -317,3 +336,5 @@
 
 </body>
 </html>
+
+
