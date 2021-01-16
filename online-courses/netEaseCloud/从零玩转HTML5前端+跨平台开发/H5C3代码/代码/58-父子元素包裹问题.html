@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>58-父子元素包裹问题</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 100px;
+            height: 100px;
+            border: 10px solid #000;
+            overflow: hidden;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.在其它浏览器中， 如果子元素的宽高大于父元素的宽高， 那么不会把父元素撑开
+但是在IE6浏览器下， 如果子元素的宽高大于父元素的宽高，那么父元素会被子元素撑开
+
+2.解决方案：
+在企业开发中， 不要让子元素的宽高大于父元素的宽高
+
+3.如果在企业开发中子元素必须要大于父元素， 那么可以添加overflow: hidden;
+overflow: hidden;含义： 将超出父元素的部分剪切掉
+-->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>131-伸缩布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+            1.默认情况下如果伸缩容器的一行放不下所有的伸缩项, 那么系统会自动等比压缩所有的伸缩项
+            2.在伸缩容器中有一个叫做flex-wrap属性, 专门用于控制放不下是否需要换行的
+            默认的取值: flex-wrap 不换行
+            wrap: 放不下就换行 而不是等比压缩
+            wrap-reverse: 放不下就换行 , 以行为单位进行反转
+            */
+            /*flex-wrap: nowrap;*/
+            /*flex-wrap: wrap;*/
+            /*flex-wrap: wrap-reverse;*/
+
+            flex-wrap: wrap;
+            /*
+            在伸缩容器中有一个叫做align-content的属性, 是专门用于设置换行之后的对齐方式的
+            注意点: 只有伸缩项发生了换行这个属性才有效
+            flex-start: 换行之后和侧轴的起点对齐, 一行接一行
+            flex-end: 换行之后和侧轴的终点对齐, 将所有换行之后的内容当做一个整体来操作
+            center: 换行之后和侧轴的中点对齐
+            space-between: 换行之后在侧轴上两端对齐
+            space-around: 换行之后在侧轴上环绕对齐
+            stretch: 以行为单位进行拉伸, 拉伸的部分以空白填充, 保证拉伸之后所有的行加起来能够填满侧轴
+            */
+            /*align-content: flex-start;*/
+            /*align-content: flex-end;*/
+            /*align-content: center;*/
+            /*align-content: space-between;*/
+            /*align-content: space-around;*/
+            align-content: stretch;
+        }
+        ul>li{
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2){
+            background: green;
+        }
+        ul>li:nth-child(3){
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

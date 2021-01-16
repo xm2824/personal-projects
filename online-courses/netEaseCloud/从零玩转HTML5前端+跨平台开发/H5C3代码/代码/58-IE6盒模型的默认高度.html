@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>58-IE6盒模型的默认高度</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 1px;
+            background: red;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.在IE6浏览器下， 盒模型的最小高度是19px， 所以如果设置了盒模型的高度为1px， 也会显示位19个px
+注意点： 在其它浏览器都没有问题
+
+2.解决方案：
+如果现在IE6浏览器下设置盒模型的高度为1px， 那么需要再添加一个属性
+overflow: hidden;
+-->
+<div></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>57-margin传递问题</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width: 200px;
+            height: 200px;
+            background: red;
+            /*border: 1px solid #000;*/
+            overflow: hidden;
+            *zoom: 1;
+        }
+        .son{
+            width: 200px;
+            height: 100px;
+            background: blue;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.在父子元素中， 如果给子元素设置了margin-top， 默认会传递到父元素
+
+2.解决方案：
+2.1给父元素设置边框
+2.2给父元素添加两行代码
+overflow: hidden;
+*zoom: 1;
+-->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

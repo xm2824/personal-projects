@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>38-input兼容问题</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            background: url("images/icon.png") no-repeat fixed;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.在IE6浏览器下, 如果给input设置背景, 那么背景会随着iNput中的内容被填满而移出input
+
+2.解决方案:
+给background设置背景关联的fixed属性即可
+-->
+<input type="text">
+</body>
+</html>

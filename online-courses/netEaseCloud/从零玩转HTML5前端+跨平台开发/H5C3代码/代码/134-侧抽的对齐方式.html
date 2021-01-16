@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>131-伸缩布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*告诉浏览器主轴的起点在伸缩容器的最左边, 告诉浏览器伸缩项从左至右的排版*/
+            flex-direction: row;
+            /*告诉浏览器排版好的伸缩项需要和主轴的起点对齐*/
+            justify-content: flex-start;
+            /*告诉浏览器排版好的伸缩项需要和侧轴的起点对齐*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            /*align-items: center;*/
+            /*
+            注意点:
+            侧轴对比主轴来说没有两端对齐(space-between)和环绕对齐(space-around)
+            */
+            /*baseline: 让所有伸缩项中的基线在一条直线上对齐*/
+            /*align-items: baseline;*/
+            /*
+            stretch(拉伸对齐/等高对齐):
+            让所有的伸缩项的高度变为侧轴的高度
+            注意点:
+            如果需要设置为拉伸对齐, 那么伸缩项不能设置高度
+            如果伸缩项设置了高度, 那么拉伸对齐就会失效
+            */
+            align-items: stretch;
+        }
+        ul>li{
+            width: 100px;
+            /*height: 100px;*/
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2){
+            padding-top: 100px;
+            background: green;
+        }
+        ul>li:nth-child(3){
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>yz</li>
+    <li>xt</li>
+    <li>op</li>
+</ul>
+</body>
+</html>

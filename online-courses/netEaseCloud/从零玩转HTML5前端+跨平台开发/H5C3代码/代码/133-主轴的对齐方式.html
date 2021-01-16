@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>131-伸缩布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+            flex-direction: row; 主轴起点的默认值
+            justify-content: flex-start; 主轴上伸缩项对齐的默认值
+            注意点: 在设置对齐方式的时候一定要理解两步操作
+            1.按照主轴起点对伸缩项进行排版
+            2.按照指定的对齐方式对齐排版好的伸缩项
+            */
+            flex-direction: row;
+            /*justify-content: flex-start;*/
+            /*justify-content: flex-end;*/
+            /*justify-content: center;*/
+            /*justify-content: space-between;*/
+            justify-content: space-around;
+        }
+        ul>li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2){
+            background: green;
+        }
+        ul>li:nth-child(3){
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>

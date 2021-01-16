@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>131-伸缩布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        ul>li{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(1){
+            /*
+            在伸缩项中有一个flex-grow属性, 用于控制当所有伸缩项的宽度总和小于伸缩容器宽度的时候如何扩充自己, 以便于所有伸缩项宽度的总和能够填满整个伸缩容器
+            默认情况下flex-grow的取值是0, 表示我们设置的宽度是多少就按照多少来显示, 不进行任何的扩充
+            注意点:
+            只有当所有伸缩项的宽度总和小于伸缩容器宽度的时候flex-grow这个属性才有效
+
+            flex-grow缩小的公式
+            1.利用伸缩容器宽度 - 所有伸缩项的宽度 = 剩余空间
+              600 - 300 = 300
+            2.利用剩余空间 / 所有需要扩充份数的总和 = 每一份的大小
+              300 / (1 + 4 + 8) = 23.07
+            3.利用当前伸缩项的宽度 + 需要的份数的宽度
+              第一个伸缩项 = 100 + (1 * 23.07) = 123.07
+              第二个伸缩项 = 100 + (4 * 23.07) = 192.28
+              第三个伸缩项 = 100 + (8 * 23.07) = 284.56
+            */
+            flex-grow: 1;
+        }
+        ul>li:nth-child(2){
+            background: green;
+            flex-grow: 4;
+        }
+        ul>li:nth-child(3){
+            background: blue;
+            flex-grow: 8;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

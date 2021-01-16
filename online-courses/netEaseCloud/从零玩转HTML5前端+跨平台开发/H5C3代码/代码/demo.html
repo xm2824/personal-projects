@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>指趣学院</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+        }
+        div{
+            width: 600px;
+            height: 200px;
+            line-height: 200px;
+            font-size: 150px;
+            font-weight: bold;
+            margin: 200px auto;
+            color: rgba(255,255,255,.3);
+            border: 1px solid red;
+            /*background: skyblue;*/
+            background: linear-gradient(-45deg, transparent 100px, white 150px, white 180px, transparent 220px) no-repeat;
+            background-position: -450px;
+
+            -webkit-background-clip: text;
+            transition: background-position 5s;
+
+        }
+        div:hover{
+            background-position: 450px;
+        }
+    </style>
+</head>
+<body>
+<div>指趣学院</div>
+</body>
+</html>

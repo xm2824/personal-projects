@@ -1,0 +1,59 @@
+<!--
+1.图片有诸多的优点, 但是缺点也很明显
+例如:
+图片会增加网页的大小(性能问题)
+图片会增加访问网页时HTTP请求的次数(性能问题)
+图片不能很好的进行缩放(失真)
+... ...
+
+2.字体图标
+本质是文字(体积小), 虽然字体图标的本质是文字, 但是也可以做出和图片一样的效果
+并且可以随意修改颜色、大小、透明度等(扩展性强)
+
+3.常用字体图标库
+https://www.iconfont.cn/
+https://icomoon.io/
+
+4.字体图片的使用
+4.1设计师提供SVG格式图标
+4.2上传到对应字体图标网站
+4.3下载生成的代码使用
+
+- 找到下载好的对应的文件, 将所有的iconfont开头的文件放到项目的font文件夹下面
+- 新建一个CSS文件, 将demo_index.html对应的代码拷贝进去
+- 注意点: 拷贝代码之后需要将@font-face中的资源路径改为拷贝资源对应的路径
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体图标的基本使用</title>
+    <!--<link rel="stylesheet" href="css/index-pc.css">-->
+    <!--<link rel="stylesheet" href="font/iconfont.css">-->
+    <script src="font/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--
+<div class="iconfont">&#xf0178;</div>
+<p class="iconfont">&#xe634;</p>
+<span class="iconfont">&#xf030d;</span>
+-->
+<!--
+<div class="iconfont icon-gouwucheman"></div>
+<p class="iconfont icon-luotuo"></p>
+<span class="iconfont icon-aixin1"></span>
+-->
+<svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-aixin"></use>
+</svg>
+</body>
+</html>
