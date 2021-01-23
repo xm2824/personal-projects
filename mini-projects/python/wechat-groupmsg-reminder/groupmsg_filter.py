@@ -1,15 +1,30 @@
 import itchat
 from mailbot import Mailbot
 from datetime import datetime
-import globals
+import globals,os,threading
+from shutil import copyfile
 chatRooms = None
 keywords_out = None
 subject = None
 mailbot = None
 
+def _copyfile():
+    while not os.path.exists('QR.png'):pass
+    copyfile('QR.png','static/images/QR.png')
+
+    _rmfile()
+
+def _rmfile():
+    while os.path.exists('QR.png'):pass
+    os.remove('static/images/QR.png')
 
 def run():
     global chatRooms,keywords_out,subject,mailbot
+    if os.path.exists('QR.png'):
+        os.remove('QR.png')
+    if os.path.exists('static/images/QR.png'):
+        os.remove('static/images/QR.png')
+    threading.Thread(target=_copyfile).start()
     itchat.auto_login(hotReload=False)
     chatRooms = itchat.get_chatrooms()
     keywords_out = '不可an',
