@@ -1,14 +1,21 @@
 import itchat
 from mailbot import Mailbot
 from datetime import datetime
-itchat.auto_login(hotReload=True)
-chatRooms = itchat.get_chatrooms()
-keywords_in = '单人','长租'
-keywords_out = '不可an',
-sendTo = 'xyslife2@qq.com'
-subject = f'租房信息 {datetime.now()}'
-mailbot = Mailbot()
+import globals
+chatRooms = None
+keywords_out = None
+subject = None
+mailbot = None
 
+
+def run():
+    global chatRooms,keywords_out,subject,mailbot
+    itchat.auto_login(hotReload=False)
+    chatRooms = itchat.get_chatrooms()
+    keywords_out = '不可an',
+    subject = f'微信群消息提醒 {datetime.now()}'
+    mailbot = Mailbot()
+    itchat.run()
 
 
 
@@ -23,14 +30,14 @@ def group_reply_text(msg):
     # if keywords requirements are met
     pred1 = lambda x: x in msgContent
     pred2 = lambda x: x not in msgContent
-    if any(map(pred1,keywords_in)) and all(map(pred2,keywords_out)):
+    if any(map(pred1,globals.keywords)) and all(map(pred2,keywords_out)):
         msgBody =f'''
         群: {msg.User.NickName} \r\n
         发送者: {msg.User.Self.NickName} \r\n
         消息内容: {msgContent}\r\n
         '''
-        mailbot.send(sendTo,subject,msgBody)
+        mailbot.send(globals.sendTo,subject,msgBody)
 
 
-itchat.run()
+
 

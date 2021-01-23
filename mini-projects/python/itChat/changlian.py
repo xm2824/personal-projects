@@ -1,6 +1,6 @@
 import itchat
 import pprint as pp
-
+import time as t
 itchat.auto_login(hotReload=True)
 chatRooms = itchat.get_chatrooms()
 changlian = None

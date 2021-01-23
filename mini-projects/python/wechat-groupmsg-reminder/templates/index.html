@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="微信,群消息,提醒,wechat,group message, reminder">
+    <title>微信群消息提醒</title>
+    <link rel="stylesheet" href="../static/css/normalize.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+
+
+</head>
+<body>
+<div class="page">
+    <div class="header"><h1>微信群消息提醒</h1>
+    <p>简介：若某个微信群消息含有关键词，则以邮件的形式提醒该消息</p>
+    </div>
+    <div class="content">
+        <form target="_blank"  method="post">
+            <div class="ll"> <label for="keywords">关键词:</label>
+                <input type="text" name="keywords" id="keywords" placeholder="以逗号隔开"></div>
+
+            <div class="lr"><label for="email">邮箱:</label>
+                <input type="text" id="email" name="email" placeholder="example@qq.com"></div>
+
+            <input type="button"  id="huoqu" value="获取登录二维码" onclick="showQRCode()">
+            <input type="submit" value="确认" onclick="showHuoquButton()">
+
+
+            <div><img id="qr" src="../static/images/test.jpg" alt="二维码还在加载，请稍后再试" ></div>
+        </form>
+    </div>
+    <div class="footer">© 2021 Tao Xiang, All rights reserved</div>
+</div>
+
+<script src="../static/js/index.js"></script>
+</body>
+</html>
