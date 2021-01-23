@@ -34,6 +34,8 @@ def _copyfile():
 if __name__ == '__main__':
     if os.path.exists('QR.png'):
         os.remove('QR.png')
+    if os.path.exists('static/images/QR.png'):
+        os.remove('static/images/QR.png')
 
     threading.Thread(target=_copyfile).start()
 
