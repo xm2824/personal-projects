@@ -5,7 +5,7 @@
 .nav1{
     display: none;
 }
-.toolbar>.header-bottom{
+.header>.header-bottom{
     width: 100%;
     padding: 0 40px;
     box-sizing: border-box;
