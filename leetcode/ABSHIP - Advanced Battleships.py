@@ -82,7 +82,7 @@ def func(string:str):
 
     res = []
     for i in range(m-s+1):
-        for j in range(m-s+1):
+        for j in range(n-s+1):
             cls = set()
             for deltaI in range(s):
                 for deltaJ in range(s):
