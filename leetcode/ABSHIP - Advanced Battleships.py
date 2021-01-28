@@ -88,7 +88,7 @@ def func(string:str):
                 for deltaJ in range(s):
                     index = getIndexIn1D(i+deltaI,j+deltaJ,n)
                     if uf.parents[index] != -1:
-                        cls.add(uf.parents[index])
+                        cls.add(uf.getRoot(index))
             res.append(len(cls))
 
     return round(sum(res) / len(res),6)

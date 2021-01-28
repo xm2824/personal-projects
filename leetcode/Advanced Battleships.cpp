@@ -3,9 +3,15 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include <math.h>
 #define getIndexIn1D(i,j,width) (i)*(width)+(j)
 using namespace std;
 
+inline double round( double val )
+{
+    if( val < 0 ) return ceil(val - 0.5);
+    return floor(val + 0.5);
+}
 
 class UnionFind{
     public:
@@ -88,7 +94,7 @@ float func(int m, int n, int s, string lines[]){
                 {
                     int index = getIndexIn1D(i+deltaI,j+deltaJ,n);
                     if(uf.parents[index] != -1){
-                        cls.insert(uf.parents[index]);
+                        cls.insert(uf.getRoot(index));
                     }
                 }
                 
@@ -113,7 +119,7 @@ float func(int m, int n, int s, string lines[]){
 
     double ret =(double)sum/res.size();
 
-    return ret;
+    return round(ret*1000000.0)/1000000.0;
 
     
 
