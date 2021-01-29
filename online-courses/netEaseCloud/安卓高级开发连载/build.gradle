@@ -1,0 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
+    }
+}
+
+// 实际上是对所有子节点进行配置
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//task cleanSelf(group : "help"){
+//    //配置阶段
+//    //print("wo shi cleanSelf")
+//    //执行阶段
+//    doLast{
+//        print("wo shi cleanSelf")
+//    }
+//}
+//
+////dependsOn 可以触发依赖的执行顺序
+//task cleanSelf1(group : "help" , dependsOn : cleanSelf) << {
+//    print("wo shi cleanSelf1")
+//}
+//
+////1|dependsOn 执行该脚本时，可以优先执行别的脚本
+////2|在原有Task基础上关联新的逻辑
+//
+//this.project.afterEvaluate {
+//    Task clean = project.tasks.getByName("clean")
+//    if (clean != null) {
+//        clean.doLast {
+//            cleanSelf.execute()
+//        }
+//    }
+//}
