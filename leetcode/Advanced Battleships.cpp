@@ -56,7 +56,7 @@ class UnionFind{
 
 
 
-float func(int m, int n, int s, string lines[]){
+double func(int m, int n, int s, string lines[]){
     UnionFind uf(m*n);
     for (size_t i = 0; i < m; i++)
     {
