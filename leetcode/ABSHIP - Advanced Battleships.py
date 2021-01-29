@@ -91,6 +91,8 @@ def func(string:str):
                         cls.add(uf.getRoot(index))
             res.append(len(cls))
 
+    
+
     return round(sum(res) / len(res),6)
 
 

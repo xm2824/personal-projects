@@ -43,15 +43,6 @@ class UnionFind{
         
     }
 
-    int getNumOfClasses(){
-        set<int> set1;
-        for (size_t i = 0; i < sizeof(this->parents)/sizeof(int); i++)
-        {
-            set1.insert(this->parents[i]);
-        }
-        return set1.size()-1;
-    }
-
 };
 
 
@@ -82,7 +73,27 @@ double func(int m, int n, int s, string lines[]){
         
     }
 
-    vector<int> res;
+    vector<set<int> > res((m-s+1)*(n-s+1));
+    for (size_t i = 0; i < m-s+1; i++)
+    {
+        for (size_t j = 0; j < n-s+1; j++)
+        {
+            int width = n-s+1;
+            int index_res = getIndexIn1D(i/s,j/s,width);
+            int index = getIndexIn1D(i,j,n);
+
+            if (uf.parents[index]!=-1)
+            {
+                /* code */
+                res[index_res].insert(uf.getRoot(index));
+            }
+            
+        }
+        
+    }
+    
+
+    /*
     for (size_t i = 0; i < m-s+1; i++)
     {
         for (size_t j = 0; j < n-s+1 ; j++)
@@ -106,12 +117,16 @@ double func(int m, int n, int s, string lines[]){
         }
         
     }
+    */
+    
+    
+    
 
 
     
     
 
-    int sum = 0;
+    long sum = 0;
     for (auto &&i : res)
     {
         sum += i;
@@ -152,6 +167,6 @@ int main() {
 
     std::cout << std::fixed;
     std::cout << std::setprecision(6);
-    std::cout << ret<<endl;	
+    std::cout << ret;
 }
 
