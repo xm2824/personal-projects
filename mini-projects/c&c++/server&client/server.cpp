@@ -1,11 +1,13 @@
-// C program for Consumer process illustrating
-// POSIX shared-memory API.
+
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <fcntl.h>
 #include <sys/shm.h>
 #include <sys/stat.h>
-#include "server.h"
+#include <sys/mman.h>
+
 
 int main()
 {
@@ -15,22 +17,34 @@ int main()
     /* name of the shared memory object */
     const char* name = "OS";
 
+    /* strings written to shared memory */
+    const char* message_0 = "Hello";
+    const char* message_1 = "World!";
+
     /* shared memory file descriptor */
     int shm_fd;
 
-    /* pointer to shared memory object */
+    /* pointer to shared memory obect */
     void* ptr;
 
-    /* open the shared memory object */
-    shm_fd = shm_open(name, O_RDONLY, 0666);
+    /* create the shared memory object */
+    shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+
+    /* configure the size of the shared memory object */
+    ftruncate(shm_fd, SIZE);
 
     /* memory map the shared memory object */
-    ptr = mmap(0, SIZE, PROT_READ, MAP_SHARED, shm_fd, 0);
+    ptr = mmap(0, SIZE, PROT_WRITE, MAP_SHARED, shm_fd, 0);
 
-    /* read from the shared memory object */
-    printf("%s", (char*)ptr);
+    char* cptr = (char*) ptr;
 
-    /* remove the shared memory object */
-    shm_unlink(name);
+    /* write to the shared memory object */
+    sprintf(cptr, "%s", message_0);
+
+
+
+    cptr += strlen(message_0);
+    sprintf(cptr, "%s", message_1);
+    cptr += strlen(message_1);
     return 0;
 }
