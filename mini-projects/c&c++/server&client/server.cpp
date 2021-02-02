@@ -7,44 +7,37 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include "common.h"
+#include "shared.h"
 
 
 int main()
 {
-    /* the size (in bytes) of shared memory object */
-    const int SIZE = 4096;
+   /* create Posix shared memory */
+   shm_unlink(SHARE_NAME);
+   int shm_fd = shm_open(SHARE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
+   if (shm_fd < 0)
+    {
+        err_quit("create shm failed.");
+    }
+    ftruncate(shm_fd, sizeof(Shared));
 
-    /* name of the shared memory object */
-    const char* name = "OS";
-
-    /* strings written to shared memory */
-    const char* message_0 = "Hello";
-    const char* message_1 = "World!";
-
-    /* shared memory file descriptor */
-    int shm_fd;
 
     /* pointer to shared memory obect */
-    void* ptr;
+    auto *ptr = (Shared *)mmap(nullptr, sizeof(Shared), PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, 0);
+    if (MAP_FAILED == ptr)
+    {
+        err_quit("mmap failed.");
+    }
+    close(shm_fd);
 
-    /* create the shared memory object */
-    shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
-
-    /* configure the size of the shared memory object */
-    ftruncate(shm_fd, SIZE);
-
-    /* memory map the shared memory object */
-    ptr = mmap(0, SIZE, PROT_WRITE, MAP_SHARED, shm_fd, 0);
-
-    char* cptr = (char*) ptr;
-
-    /* write to the shared memory object */
-    sprintf(cptr, "%s", message_0);
+    /* initialize reader writer lock */
+    ptr->rwlock=PTHREAD_RWLOCK_INITIALIZER;
 
 
 
-    cptr += strlen(message_0);
-    sprintf(cptr, "%s", message_1);
-    cptr += strlen(message_1);
+
+
+
     return 0;
 }

@@ -1,3 +1,3 @@
-/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/server_client.dir
+/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/server_client.dir

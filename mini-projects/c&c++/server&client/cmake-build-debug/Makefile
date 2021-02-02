@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client"
+CMAKE_SOURCE_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = "/home/yunshu/git/developments/personal-projects/mini-project
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,33 @@ client.s: client.cpp.s
 client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/client.cpp.s
 .PHONY : client.cpp.s
+
+common.o: common.cpp.o
+
+.PHONY : common.o
+
+# target to build an object file
+common.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/common.cpp.o
+.PHONY : common.cpp.o
+
+common.i: common.cpp.i
+
+.PHONY : common.i
+
+# target to preprocess a source file
+common.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/common.cpp.i
+.PHONY : common.cpp.i
+
+common.s: common.cpp.s
+
+.PHONY : common.s
+
+# target to generate assembly for a file
+common.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/common.cpp.s
+.PHONY : common.cpp.s
 
 main.o: main.cpp.o
 
@@ -263,6 +290,9 @@ help:
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... common.o"
+	@echo "... common.i"
+	@echo "... common.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
