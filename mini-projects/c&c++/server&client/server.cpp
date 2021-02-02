@@ -7,12 +7,20 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
-#include "common.h"
-#include "shared.h"
+#include "common.hpp"
+#include "shared.hpp"
 
 
 int main()
 {
+    /* closed the memory if size is -1 */
+    if (false)
+    {
+        shm_unlink(SHARE_NAME);
+        return 0;
+    }
+
+
    /* create Posix shared memory */
    shm_unlink(SHARE_NAME);
    int shm_fd = shm_open(SHARE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
@@ -33,6 +41,8 @@ int main()
 
     /* initialize reader writer lock */
     ptr->rwlock=PTHREAD_RWLOCK_INITIALIZER;
+
+
 
 
 

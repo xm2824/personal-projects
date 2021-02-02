@@ -2,8 +2,8 @@
 // Created by yun-_-shu on 2/2/21.
 //
 
-#ifndef SERVER_CLIENT_SHARED_H
-#define SERVER_CLIENT_SHARED_H
+#ifndef SERVER_CLIENT_SHARED_HPP
+#define SERVER_CLIENT_SHARED_HPP
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,4 +22,4 @@ struct Shared{
 
 
 
-#endif //SERVER_CLIENT_SHARED_H
+#endif //SERVER_CLIENT_SHARED_HPP
