@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client"
+CMAKE_SOURCE_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-proj
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,33 @@ server_client: cmake_check_build_system
 server_client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/build
 .PHONY : server_client/fast
+
+ListEntry.o: ListEntry.cpp.o
+
+.PHONY : ListEntry.o
+
+# target to build an object file
+ListEntry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/ListEntry.cpp.o
+.PHONY : ListEntry.cpp.o
+
+ListEntry.i: ListEntry.cpp.i
+
+.PHONY : ListEntry.i
+
+# target to preprocess a source file
+ListEntry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/ListEntry.cpp.i
+.PHONY : ListEntry.cpp.i
+
+ListEntry.s: ListEntry.cpp.s
+
+.PHONY : ListEntry.s
+
+# target to generate assembly for a file
+ListEntry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/ListEntry.cpp.s
+.PHONY : ListEntry.cpp.s
 
 client.o: client.cpp.o
 
@@ -197,6 +224,33 @@ common.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/common.cpp.s
 .PHONY : common.cpp.s
 
+hashtable.o: hashtable.cpp.o
+
+.PHONY : hashtable.o
+
+# target to build an object file
+hashtable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/hashtable.cpp.o
+.PHONY : hashtable.cpp.o
+
+hashtable.i: hashtable.cpp.i
+
+.PHONY : hashtable.i
+
+# target to preprocess a source file
+hashtable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/hashtable.cpp.i
+.PHONY : hashtable.cpp.i
+
+hashtable.s: hashtable.cpp.s
+
+.PHONY : hashtable.s
+
+# target to generate assembly for a file
+hashtable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/hashtable.cpp.s
+.PHONY : hashtable.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -251,6 +305,60 @@ server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/server.cpp.s
 .PHONY : server.cpp.s
 
+shared.o: shared.cpp.o
+
+.PHONY : shared.o
+
+# target to build an object file
+shared.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/shared.cpp.o
+.PHONY : shared.cpp.o
+
+shared.i: shared.cpp.i
+
+.PHONY : shared.i
+
+# target to preprocess a source file
+shared.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/shared.cpp.i
+.PHONY : shared.cpp.i
+
+shared.s: shared.cpp.s
+
+.PHONY : shared.s
+
+# target to generate assembly for a file
+shared.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/shared.cpp.s
+.PHONY : shared.cpp.s
+
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,18 +368,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... server_client"
+	@echo "... ListEntry.o"
+	@echo "... ListEntry.i"
+	@echo "... ListEntry.s"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
 	@echo "... common.o"
 	@echo "... common.i"
 	@echo "... common.s"
+	@echo "... hashtable.o"
+	@echo "... hashtable.i"
+	@echo "... hashtable.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"
+	@echo "... shared.o"
+	@echo "... shared.i"
+	@echo "... shared.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

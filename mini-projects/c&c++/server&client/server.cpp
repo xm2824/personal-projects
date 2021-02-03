@@ -1,45 +1,34 @@
 
-#include <unistd.h>
-#include <iostream>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <sys/shm.h>
-#include <sys/stat.h>
-#include <sys/mman.h>
 #include "common.hpp"
-#include "shared.hpp"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    int size;
+    
 
     /* read size from input */
     if (argc==1){
         cout<<"Please specify the size of the hashtable"<<endl;
-        cout<<"Usage:\t\t./server <size>"
+        cout<<"Usage:\t./server <size>"<<endl;
+        cout<<"      \t         if the size = -1, then the shared memory is closed"<<endl;
         return 0;
     }
     else{
-        size= stoi(argv[1]);
-        if (size<=0){
+        SIZE= stoi(argv[1]);
+        if (SIZE==-1){
+            shm_unlink(SHARE_NAME);
+            cout<<"Hashtable closed"<<endl;
+            return 0;
+        }
+        if (SIZE<=0){
             cout<<"The size must be positive!"<<endl;
             return 0;
         }
         else{
             cout<<"Hashtable created!"<<endl;
-            cout<<"The size of the hashtable is "<<size<<"."<<endl;
+            cout<<"The size of the hashtable is "<<SIZE<<"."<<endl;
         }
-    }
-
-
-    /* closed the memory if size is -1 */
-    if (false)
-    {
-        shm_unlink(SHARE_NAME);
-        return 0;
     }
 
 
@@ -63,9 +52,8 @@ int main(int argc, char *argv[])
 
     /* initialize reader writer lock */
     ptr->rwlock=PTHREAD_RWLOCK_INITIALIZER;
-
-
-
+    ptr->arr = new vector<int>(SIZE);
+    cout<<ptr->arr->at(0)<<endl;
 
 
 

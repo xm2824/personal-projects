@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/yun-_-shu/Documents/clion-2020.3.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/yunshu/Documents/clion-2020.3.1/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client"
+CMAKE_SOURCE_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server_client.dir/depend.make
@@ -79,62 +79,118 @@ include CMakeFiles/server_client.dir/flags.make
 
 CMakeFiles/server_client.dir/main.cpp.o: CMakeFiles/server_client.dir/flags.make
 CMakeFiles/server_client.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_client.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/main.cpp.o -c "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_client.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/main.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp"
 
 CMakeFiles/server_client.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp" > CMakeFiles/server_client.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp" > CMakeFiles/server_client.dir/main.cpp.i
 
 CMakeFiles/server_client.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp" -o CMakeFiles/server_client.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/main.cpp" -o CMakeFiles/server_client.dir/main.cpp.s
 
 CMakeFiles/server_client.dir/server.cpp.o: CMakeFiles/server_client.dir/flags.make
 CMakeFiles/server_client.dir/server.cpp.o: ../server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_client.dir/server.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/server.cpp.o -c "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_client.dir/server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/server.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp"
 
 CMakeFiles/server_client.dir/server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp" > CMakeFiles/server_client.dir/server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp" > CMakeFiles/server_client.dir/server.cpp.i
 
 CMakeFiles/server_client.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp" -o CMakeFiles/server_client.dir/server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/server.cpp" -o CMakeFiles/server_client.dir/server.cpp.s
 
 CMakeFiles/server_client.dir/client.cpp.o: CMakeFiles/server_client.dir/flags.make
 CMakeFiles/server_client.dir/client.cpp.o: ../client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server_client.dir/client.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/client.cpp.o -c "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server_client.dir/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/client.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp"
 
 CMakeFiles/server_client.dir/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp" > CMakeFiles/server_client.dir/client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp" > CMakeFiles/server_client.dir/client.cpp.i
 
 CMakeFiles/server_client.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp" -o CMakeFiles/server_client.dir/client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/client.cpp" -o CMakeFiles/server_client.dir/client.cpp.s
 
 CMakeFiles/server_client.dir/common.cpp.o: CMakeFiles/server_client.dir/flags.make
 CMakeFiles/server_client.dir/common.cpp.o: ../common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server_client.dir/common.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/common.cpp.o -c "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server_client.dir/common.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/common.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp"
 
 CMakeFiles/server_client.dir/common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/common.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp" > CMakeFiles/server_client.dir/common.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp" > CMakeFiles/server_client.dir/common.cpp.i
 
 CMakeFiles/server_client.dir/common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/common.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp" -o CMakeFiles/server_client.dir/common.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/common.cpp" -o CMakeFiles/server_client.dir/common.cpp.s
+
+CMakeFiles/server_client.dir/hashtable.cpp.o: CMakeFiles/server_client.dir/flags.make
+CMakeFiles/server_client.dir/hashtable.cpp.o: ../hashtable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/server_client.dir/hashtable.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/hashtable.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/hashtable.cpp"
+
+CMakeFiles/server_client.dir/hashtable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/hashtable.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/hashtable.cpp" > CMakeFiles/server_client.dir/hashtable.cpp.i
+
+CMakeFiles/server_client.dir/hashtable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/hashtable.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/hashtable.cpp" -o CMakeFiles/server_client.dir/hashtable.cpp.s
+
+CMakeFiles/server_client.dir/test.cpp.o: CMakeFiles/server_client.dir/flags.make
+CMakeFiles/server_client.dir/test.cpp.o: ../test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/server_client.dir/test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/test.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/test.cpp"
+
+CMakeFiles/server_client.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/test.cpp" > CMakeFiles/server_client.dir/test.cpp.i
+
+CMakeFiles/server_client.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/test.cpp" -o CMakeFiles/server_client.dir/test.cpp.s
+
+CMakeFiles/server_client.dir/ListEntry.cpp.o: CMakeFiles/server_client.dir/flags.make
+CMakeFiles/server_client.dir/ListEntry.cpp.o: ../ListEntry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/server_client.dir/ListEntry.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/ListEntry.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/ListEntry.cpp"
+
+CMakeFiles/server_client.dir/ListEntry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/ListEntry.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/ListEntry.cpp" > CMakeFiles/server_client.dir/ListEntry.cpp.i
+
+CMakeFiles/server_client.dir/ListEntry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/ListEntry.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/ListEntry.cpp" -o CMakeFiles/server_client.dir/ListEntry.cpp.s
+
+CMakeFiles/server_client.dir/shared.cpp.o: CMakeFiles/server_client.dir/flags.make
+CMakeFiles/server_client.dir/shared.cpp.o: ../shared.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/server_client.dir/shared.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_client.dir/shared.cpp.o -c "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/shared.cpp"
+
+CMakeFiles/server_client.dir/shared.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_client.dir/shared.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/shared.cpp" > CMakeFiles/server_client.dir/shared.cpp.i
+
+CMakeFiles/server_client.dir/shared.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_client.dir/shared.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/shared.cpp" -o CMakeFiles/server_client.dir/shared.cpp.s
 
 # Object files for target server_client
 server_client_OBJECTS = \
 "CMakeFiles/server_client.dir/main.cpp.o" \
 "CMakeFiles/server_client.dir/server.cpp.o" \
 "CMakeFiles/server_client.dir/client.cpp.o" \
-"CMakeFiles/server_client.dir/common.cpp.o"
+"CMakeFiles/server_client.dir/common.cpp.o" \
+"CMakeFiles/server_client.dir/hashtable.cpp.o" \
+"CMakeFiles/server_client.dir/test.cpp.o" \
+"CMakeFiles/server_client.dir/ListEntry.cpp.o" \
+"CMakeFiles/server_client.dir/shared.cpp.o"
 
 # External object files for target server_client
 server_client_EXTERNAL_OBJECTS =
@@ -143,9 +199,13 @@ server_client: CMakeFiles/server_client.dir/main.cpp.o
 server_client: CMakeFiles/server_client.dir/server.cpp.o
 server_client: CMakeFiles/server_client.dir/client.cpp.o
 server_client: CMakeFiles/server_client.dir/common.cpp.o
+server_client: CMakeFiles/server_client.dir/hashtable.cpp.o
+server_client: CMakeFiles/server_client.dir/test.cpp.o
+server_client: CMakeFiles/server_client.dir/ListEntry.cpp.o
+server_client: CMakeFiles/server_client.dir/shared.cpp.o
 server_client: CMakeFiles/server_client.dir/build.make
 server_client: CMakeFiles/server_client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable server_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable server_client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -158,6 +218,6 @@ CMakeFiles/server_client.dir/clean:
 .PHONY : CMakeFiles/server_client.dir/clean
 
 CMakeFiles/server_client.dir/depend:
-	cd "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" "/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/server_client.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug" "/home/yunshu/git/developments/personal-projects/mini-projects/c&c++/server&client/cmake-build-debug/CMakeFiles/server_client.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/server_client.dir/depend
 

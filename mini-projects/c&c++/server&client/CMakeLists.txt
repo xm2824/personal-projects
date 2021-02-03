@@ -3,4 +3,4 @@ project(server_client)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(server_client main.cpp server.cpp client.cpp shared.hpp common.hpp common.cpp)
+add_executable(server_client main.cpp server.cpp client.cpp shared.hpp common.hpp common.cpp hashtable.hpp hashtable.cpp test.cpp ListEntry.cpp ListEntry.hpp shared.cpp)

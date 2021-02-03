@@ -4,21 +4,18 @@
 
 #ifndef SERVER_CLIENT_SHARED_HPP
 #define SERVER_CLIENT_SHARED_HPP
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <pthread.h>
-#include <vector>
-#include <forward_list>
+#include "common.hpp"
 
+using namespace std;
 class Shared{
+    string value;
 public:
     pthread_rwlock_t rwlock;
-    int product;
-    Shared(){
-        product = 0;
-    }
+    string getValue() const;
+    void setValue(string& val);
+
+    Shared();
+
 };
 
 
