@@ -224,33 +224,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-server.o: server.c.o
-
-.PHONY : server.o
-
-# target to build an object file
-server.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/server.c.o
-.PHONY : server.c.o
-
-server.i: server.c.i
-
-.PHONY : server.i
-
-# target to preprocess a source file
-server.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/server.c.i
-.PHONY : server.c.i
-
-server.s: server.c.s
-
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server_client.dir/build.make CMakeFiles/server_client.dir/server.c.s
-.PHONY : server.c.s
-
 server.o: server.cpp.o
 
 .PHONY : server.o
@@ -296,9 +269,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

@@ -1,6 +1,6 @@
 
 #include <unistd.h>
-#include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
@@ -10,9 +10,31 @@
 #include "common.hpp"
 #include "shared.hpp"
 
+using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
+    int size;
+
+    /* read size from input */
+    if (argc==1){
+        cout<<"Please specify the size of the hashtable"<<endl;
+        cout<<"Usage:\t\t./server <size>"
+        return 0;
+    }
+    else{
+        size= stoi(argv[1]);
+        if (size<=0){
+            cout<<"The size must be positive!"<<endl;
+            return 0;
+        }
+        else{
+            cout<<"Hashtable created!"<<endl;
+            cout<<"The size of the hashtable is "<<size<<"."<<endl;
+        }
+    }
+
+
     /* closed the memory if size is -1 */
     if (false)
     {

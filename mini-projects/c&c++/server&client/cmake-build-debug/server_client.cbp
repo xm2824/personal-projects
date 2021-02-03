@@ -90,22 +90,16 @@
 		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/common.cpp">
 			<Option target="server_client"/>
 		</Unit>
-		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/common.h">
+		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/common.hpp">
 			<Option target="server_client"/>
 		</Unit>
 		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/main.cpp">
 			<Option target="server_client"/>
 		</Unit>
-		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/server.c">
-			<Option target="server_client"/>
-		</Unit>
 		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/server.cpp">
 			<Option target="server_client"/>
 		</Unit>
-		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/server.h">
-			<Option target="server_client"/>
-		</Unit>
-		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/shared.h">
+		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/shared.hpp">
 			<Option target="server_client"/>
 		</Unit>
 		<Unit filename="/home/yun-_-shu/git/developments/personal-projects/mini-projects/c&amp;c++/server&amp;client/CMakeLists.txt">

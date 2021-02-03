@@ -12,7 +12,8 @@
 #include <vector>
 #include <forward_list>
 
-struct Shared{
+class Shared{
+public:
     pthread_rwlock_t rwlock;
     int product;
     Shared(){
