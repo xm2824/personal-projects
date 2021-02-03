@@ -30,13 +30,13 @@ int main()
     {
         err_quit("open shm failed.");
     }
-    auto ptr = (ListEntry *)mmap(nullptr, 20*sizeof(ListEntry), PROT_READ|PROT_WRITE, MAP_SHARED, shmFd, 0);
+    auto ptr = (ListEntry *)mmap(nullptr, SIZE*sizeof(ListEntry), PROT_READ|PROT_WRITE, MAP_SHARED, shmFd, 0);
     if (MAP_FAILED == ptr)
     {
         err_quit("mmap failed.");
     }
     close(shmFd);
-    
+
 
     for (int i = 0; i < SIZE; ++i) {
         cout<<(ptr+i)->hasSM<<endl;
