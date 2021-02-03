@@ -1,18 +1,20 @@
 #include "ListEntry.hpp"
+
+#include <utility>
 #include "common.hpp"
 using namespace std;
-ListEntry::ListEntry(string &key, string& value) {
-    this->hasSM = false;
-    this->key = move(key);
+ListEntry::ListEntry(string key, string value) {
+    this->key = std::move(key);
     this->next = nullptr;
-    this->createSM(&this->ptr,value);
+    this->createSM(&this->ptr,std::move(value));
+
 }
 
-void ListEntry::createSM(Shared** a,string& value)  {
+void ListEntry::createSM(Shared** a,string value)  {
     int shm_fd = shm_open(this->key.c_str(), O_RDWR|O_CREAT|O_EXCL, 0664);
     if (shm_fd < 0)
     {
-        err_quit("create shm failed.");
+        err_quit("create shm failed. Probably the key already exists, try update");
     }
     ftruncate(shm_fd, sizeof(Shared));
 
@@ -25,13 +27,12 @@ void ListEntry::createSM(Shared** a,string& value)  {
     close(shm_fd);
 
     // initialize the shared
-    (*a)->rwlock = PTHREAD_RWLOCK_INITIALIZER;
+    new (*a) Shared(std::move(value));
 
     // set flag
-    this->hasSM = true;
+//    this->hasSM = true;
 
-    // set value
-    this->writeValue(value);
+
 
 
 
@@ -41,37 +42,44 @@ void ListEntry::createSM(Shared** a,string& value)  {
 
 }
 
-void ListEntry::closeSM()  {
+inline void ListEntry::closeSM() const  {
     shm_unlink(this->key.c_str());
-    this->hasSM = false;
+    cout<<"removed"<<endl;
 }
 
- void ListEntry::addNext(string &next_key,string& val) {
-    this->next = new ListEntry(next_key,val);
+ void ListEntry::addNext(string next_key,string val) {
+    this->next = new ListEntry(std::move(next_key),std::move(val));
 }
 
-void ListEntry::writeValue(string &newVal) {
-    if (!this->hasSM){
-        this->createSM(&this->ptr,newVal);
-    }
-    else{
+void ListEntry::writeValue(string newVal) {
         pthread_rwlock_wrlock(&this->ptr->rwlock);
-        this->ptr->setValue(newVal);
+        this->ptr->setValue(std::move(newVal));
         pthread_rwlock_unlock(&ptr->rwlock);
-    }
 }
 
 string ListEntry::readValue() const {
     string ret;
+//    int shmFd = shm_open(this->key.c_str(), O_RDWR, 0);
+//    if (shmFd < 0)
+//    {
+//        err_quit("open shm failed.");
+//    }
+//    auto ptr2 = (Shared *)mmap(nullptr, sizeof(Shared), PROT_READ|PROT_WRITE, MAP_SHARED, shmFd, 0);
+//    if (MAP_FAILED == ptr)
+//    {
+//        cout<<SIZE<<endl;
+//        err_quit("mmap failed.");
+//    }
+//    close(shmFd);
+
     pthread_rwlock_rdlock(&ptr->rwlock);
     ret = ptr->getValue();
     pthread_rwlock_unlock(&ptr->rwlock);
     return ret;
 }
 
-void ListEntry::deleteSelf() {
+inline void ListEntry::deleteSelf() const {
     this->closeSM();
-    delete this;
 }
 
 
@@ -79,10 +87,13 @@ void ListEntry::deleteSelf() {
  * for head of the list
  */
 ListEntry::ListEntry() {
-    this->hasSM = false;
     this->ptr = nullptr;
     this->key = "";
     this->next = nullptr;
+}
+
+ListEntry::~ListEntry() {
+    this->deleteSelf();
 }
 
 

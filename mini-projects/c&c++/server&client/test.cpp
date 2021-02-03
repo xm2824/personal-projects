@@ -16,7 +16,7 @@ int main(){
         int shm_fd = shm_open(SIZE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
         if (shm_fd < 0)
         {
-            err_quit("create shm failed.");
+            err_quit("create shm failed. Probably the key already exists, try update");
         }
         ftruncate(shm_fd, sizeof(int));
 
@@ -53,11 +53,13 @@ int main(){
         new(array+i) ListEntry();
     }
 
-    (array+2)->hasSM = true;
-    for (int i = 0; i < SIZE; ++i) {
-        cout<<(array+i)->hasSM<<endl;
 
-    }
+
+    array->addNext("wwaawwwwaa",  "1");
+    cout<<array->next->readValue()<<endl;
+    array->next->writeValue("hladsf");
+    cout<<array->next->readValue()<<endl;
+
 
 
 //    auto a =(ListEntry*) malloc(20*sizeof (ListEntry));
@@ -66,5 +68,7 @@ int main(){
 //    }
 //
 //    cout<<(a+2)->key<<endl;
+
+//ListEntry a("4ssss123",  "123");
 
 };

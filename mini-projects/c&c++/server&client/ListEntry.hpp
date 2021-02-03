@@ -9,20 +9,22 @@
 
 using namespace std;
 class ListEntry{
+    void createSM(Shared** a,string val) ;
+    Shared* ptr;
 public:
     std::string key;
-    bool hasSM;
     ListEntry* next;
-    Shared* ptr;
 
-    explicit ListEntry(string& key,string& value);
-    void createSM(Shared** a,string& val) ;
-    void closeSM() ;
-    void addNext(string& key,string& val);
+
+    explicit ListEntry(string key,string value);
+
+    void closeSM() const ;
+    void addNext(string key,string val);
 
     string readValue() const;
-    void writeValue(string& newVal);
-    void deleteSelf();
+    void writeValue(string newVal);
+    void deleteSelf() const;
     ListEntry();
+    ~ListEntry();
 };
 #endif //SERVER_CLIENT_LISTENTRY_HPP

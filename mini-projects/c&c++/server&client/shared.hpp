@@ -12,9 +12,9 @@ class Shared{
 public:
     pthread_rwlock_t rwlock;
     string getValue() const;
-    void setValue(string& val);
+    void setValue(string val);
 
-    Shared();
+    Shared(string value);
 
 };
 

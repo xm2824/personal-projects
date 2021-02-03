@@ -1,11 +1,10 @@
-
+#include "ListEntry.hpp"
 #include "common.hpp"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    
 
     /* read size from input */
     if (argc==1){
@@ -31,32 +30,55 @@ int main(int argc, char *argv[])
         }
     }
 
+    // store size
+    {
+        shm_unlink(SIZE_NAME);
+        int shm_fd = shm_open(SIZE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
+        if (shm_fd < 0)
+        {
+            err_quit("create shm failed. Probably the key already exists, try update");
+        }
+        ftruncate(shm_fd, sizeof(int));
 
-   /* create Posix shared memory */
-   shm_unlink(SHARE_NAME);
-   int shm_fd = shm_open(SHARE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
-   if (shm_fd < 0)
+
+        /* pointer to shared memory obect */
+        auto a = (int*)mmap(nullptr, sizeof(int), PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, 0);
+        if (MAP_FAILED == a)
+        {
+            err_quit("mmap failed.");
+        }
+        close(shm_fd);
+
+        *a = SIZE;
+    }
+
+    /* create the shared memory */
+    shm_unlink(SHARE_NAME);
+    int shm_fd = shm_open(SHARE_NAME, O_RDWR|O_CREAT|O_EXCL, 0664);
+    if (shm_fd < 0)
     {
         err_quit("create shm failed.");
     }
-    ftruncate(shm_fd, sizeof(Shared));
+    ftruncate(shm_fd, SIZE*sizeof(ListEntry));
 
 
     /* pointer to shared memory obect */
-    auto *ptr = (Shared *)mmap(nullptr, sizeof(Shared), PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, 0);
-    if (MAP_FAILED == ptr)
+    auto array = (ListEntry*)mmap(nullptr, SIZE*sizeof(ListEntry), PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, 0);
+    if (MAP_FAILED == array)
     {
         err_quit("mmap failed.");
     }
     close(shm_fd);
-
-    /* initialize reader writer lock */
-    ptr->rwlock=PTHREAD_RWLOCK_INITIALIZER;
-    ptr->arr = new vector<int>(SIZE);
-    cout<<ptr->arr->at(0)<<endl;
+    for (int i = 0; i < SIZE; ++i) {
+        new(array+i) ListEntry();
+    }
 
 
 
+    array->addNext("wwaawwwwaa",  "1");
+    cout<<array->next->readValue()<<endl;
+    array->next->writeValue("hladsf");
+    cout<<array->next->readValue()<<endl;
 
 
     return 0;
