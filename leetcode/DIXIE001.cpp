@@ -21,6 +21,7 @@ bool cmp(pair<char, int>& a,
 // to value in a (key-value) pairs 
 void sort_(unordered_map<char, int>& M) 
 { 
+    // cout<<"sorted:"<<endl;
 
 	// Declare vector of pairs 
 	vector<pair<char, int> > A; 
@@ -34,7 +35,7 @@ void sort_(unordered_map<char, int>& M)
 	// Sort using comparator function 
 	sort(A.begin(), A.end(), cmp); 
 
-	// // Print the sorted value 
+	// Print the sorted value 
 	// for (auto& it : A) { 
 
 	// 	cout << it.first << ' '
@@ -68,8 +69,8 @@ void printFrequency(string str,unordered_map<char,int>& M)
         }
     }
  
-    // // Traverse the map to print the
-    // // frequency
+    // Traverse the map to print the
+    // frequency
     // for (auto& it : M) {
     //     cout << it.first << ' ' << it.second << '\n';
     // }
@@ -81,13 +82,15 @@ int main() {
 	char input[1000];
     for (size_t i = 0; i < 999; i++)
     {
-        input[i] = getchar();
-        if (input[i] == EOF)
-        {
-            int a = input[i];
-            cout<<"eof: "<<a<<endl;
+        char tmp = getchar();
+        if(tmp != EOF){
+            input[i] = tmp;
+        }
+        else{
+            input[i]=-1;
             break;
         }
+       
         
     }
     
@@ -108,6 +111,24 @@ int main() {
     for(unordered_map<char,int>::iterator it = M.begin(); it != M.end(); ++it) {
         key.push_back(it->first);
 }
+    // for (auto &&i : key)
+    // {
+    //     cout<<i<<endl;
+    // }
+    
+    unordered_map<char,char> mapping;
+    for (size_t i = 0; i < size; i++)
+    {
+        mapping[key[i]]=key[size-1-i];
+    }
+
+    for (size_t i = 0; input[i] != -1; i++)
+    {
+        input[i] = mapping.at(input[i]);
+    }
+    cout<<input<<endl;
+    
+    
     
     
     
