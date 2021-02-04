@@ -9,5 +9,6 @@
 #include <string>
 
 using namespace std;
-
+unsigned long hash(string& key);
+void insert(string& key, string& val);
 #endif //SERVER_CLIENT_HASHTABLE_HPP

@@ -3,7 +3,7 @@ CC = g++
 LIBS = -lrt
 FLAGS =-pthread
 server: common.cpp common.hpp shared.hpp  shared.cpp ListEntry.hpp ListEntry.cpp server.cpp
-	$(CC) -o $@ $^  $(LIBS)
+	$(CC) -o $@ $^ $(FLAGS) $(LIBS)
 
 
 client: common.cpp common.hpp shared.hpp  shared.cpp ListEntry.hpp ListEntry.cpp client.cpp
