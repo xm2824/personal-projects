@@ -1,5 +1,4 @@
 #include "ListEntry.hpp"
-
 #include <utility>
 #include "common.hpp"
 using namespace std;

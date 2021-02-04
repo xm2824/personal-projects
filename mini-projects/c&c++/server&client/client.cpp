@@ -57,20 +57,36 @@ int main()
             int count = 0;
             while ((pos = input.find(delimiter)) != std::string::npos) {
                 token = input.substr(0, pos);
-                std::cout << token << std::endl;
                 input.erase(0, pos + delimiter.length());
                 count ++;
-                if(count==2){
-                    break;
-                }
             }
-            cout<<getValueByKey(token,hashTable);
+            if(count==0){
+                cout<<help<<endl;
+            }
+            else{cout<<getValueByKey(input,hashTable)<<endl;}
 
         }
 
         // insert
         else if (stringBeginsWith(input,"insert")){
-
+            std::string delimiter = " ";
+            size_t pos = 0;
+            std::string token,key3;
+            int count = 0;
+            while ((pos = input.find(delimiter)) != std::string::npos) {
+                token = input.substr(0, pos);
+                input.erase(0, pos + delimiter.length());
+                count ++;
+                if(count==2){
+                    key3 = token;
+                }
+            }
+            if(count==1){
+                cout<<help<<endl;
+            }else if(input.length()==0){cout<<help<<endl;}
+            else{
+                insertKeyValue(key3,input,hashTable);
+            }
         }
 
         // delete
