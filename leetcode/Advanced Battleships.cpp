@@ -4,6 +4,7 @@
 #include <vector>
 #include <iomanip>
 #include <math.h>
+
 #define getIndexIn1D(i,j,width) (i)*(width)+(j)
 using namespace std;
 

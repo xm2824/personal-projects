@@ -1,5 +1,10 @@
-#include <bits/stdc++.h> 
+#include<vector> 
+#include<unordered_map>
+#include<string>
+#include<iostream>
+#include<algorithm>
 using namespace std;
+std::vector<char> key;
 
 
 
@@ -9,7 +14,7 @@ bool cmp(pair<char, int>& a,
 		pair<char, int>& b) 
 { 
     if(a.second<b.second) return true;
-    else if (a.second=b.second)
+    else if (a.second==b.second)
     {
         return a.first<b.first;
     }
@@ -36,11 +41,9 @@ void sort_(unordered_map<char, int>& M)
 	sort(A.begin(), A.end(), cmp); 
 
 	// Print the sorted value 
-	// for (auto& it : A) { 
-
-	// 	cout << it.first << ' '
-	// 		<< it.second << endl; 
-	// } 
+	for (auto& it : A) { 
+            key.push_back(it.first);
+	} 
 } 
 
 void printFrequency(string str,unordered_map<char,int>& M)
@@ -53,6 +56,11 @@ void printFrequency(string str,unordered_map<char,int>& M)
     // or not
     for (int i = 0; str[i]; i++) 
     {
+        if (str[i]==EOF)
+        {
+            continue;
+        }
+        
         // If the current characters
         // is not found then insert
         // current characters with
@@ -79,8 +87,8 @@ void printFrequency(string str,unordered_map<char,int>& M)
 int main() {
     string _;
     getline(cin,_);
-	char input[1000];
-    for (size_t i = 0; i < 999; i++)
+	char input[300000];
+    for (size_t i = 0; i < 299999; i++)
     {
         char tmp = getchar();
         if(tmp != EOF){
@@ -107,14 +115,9 @@ int main() {
     sort_(M);
     int size = M.size();
 
-    std::vector<char> key;
-    for(unordered_map<char,int>::iterator it = M.begin(); it != M.end(); ++it) {
-        key.push_back(it->first);
-}
-    // for (auto &&i : key)
-    // {
-    //     cout<<i<<endl;
-    // }
+    
+    
+
     
     unordered_map<char,char> mapping;
     for (size_t i = 0; i < size; i++)
@@ -122,11 +125,29 @@ int main() {
         mapping[key[i]]=key[size-1-i];
     }
 
-    for (size_t i = 0; input[i] != -1; i++)
+    // for (auto &&i : mapping)
+    // {
+    //     cout<<i.first<<": "<<i.second<<endl;
+    // }
+    
+
+    for (size_t i = 0; ; i++)
     {
-        input[i] = mapping.at(input[i]);
+        if (input[i] != -1)
+        {
+            input[i] = mapping.at(input[i]);
+        }
+        else {
+            input[i]=0;
+            break;
+            }
+
+        
+        
     }
-    cout<<input<<endl;
+    cout<<input;
+    
+    
     
     
     
