@@ -4,12 +4,11 @@
 
 #ifndef SERVER_CLIENT_HASHTABLE_HPP
 #define SERVER_CLIENT_HASHTABLE_HPP
-#include <vector>
-#include <forward_list>
 #include <string>
+#include "ListEntry.hpp"
 
 using namespace std;
-unsigned long hash_(string& key);
-void insert(string& key, string& val);
-string getValueByKey(string& key);
+unsigned long hash_(const string& key);
+void insertKeyValue(const string& key2, const string& val, ListEntry *hashTable);
+string getValueByKey(const string& key2, ListEntry* hashtable);
 #endif //SERVER_CLIENT_HASHTABLE_HPP

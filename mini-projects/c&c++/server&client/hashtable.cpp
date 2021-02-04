@@ -3,16 +3,35 @@
 //
 
 #include "hashtable.hpp"
-#include "common.hpp"
 #include <functional>
+using namespace std;
 
-unsigned long hash_(string& key){
+unsigned long hash_(const string& key){
     return std::hash<string>()(key) %SIZE;
 }
 
-void insert(string& key, string& val){
+void insertKeyValue(const string& key2, const string& val, ListEntry *hashTable) {
+    auto hashCode = hash_(key2);
+    auto tmp = hashTable + hashCode;
+    while (tmp->next){
+        tmp = tmp->next;
+        if (tmp->key == key2){
+            tmp->writeValue(val);
+            return;
+        }
+    }
+    // key not existed yet
+    tmp->addNext(key2,val);
 
 }
-string getValueByKey(string& key){
-    auto hashCode = hash_(key);
+string getValueByKey(const string& key2, ListEntry* hashtable){
+    auto hashCode = hash_(key2);
+    auto tmp = hashtable+hashCode;
+    while (tmp->next){
+        tmp = tmp->next;
+        if(tmp->key == key2){
+            return tmp->readValue();
+        }
+    }
+    return "???:this key doesn't exist";
 }

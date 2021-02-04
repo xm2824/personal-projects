@@ -1,5 +1,6 @@
 #include "common.hpp"
 #include "ListEntry.hpp"
+#include "hashtable.hpp"
 
 
 using namespace std;
@@ -38,6 +39,8 @@ int main()
     close(shmFd);
 
 
+    insertKeyValue("dsf","value1",hashTable);
+    cout << getValueByKey( "dsf", hashTable) << endl;
 
 
 
