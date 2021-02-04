@@ -16,6 +16,8 @@
 #include "shared.hpp"
 #include "hashtable.hpp"
 
+
+extern void const* HASHTABLE;
 extern char const * SHARE_NAME;
 extern char const* SIZE_NAME;
 extern int SIZE;

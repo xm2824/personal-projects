@@ -6,10 +6,13 @@
 #include "common.hpp"
 #include <functional>
 
-unsigned long hash(string& key){
-    return std::hash<string>()(key);
+unsigned long hash_(string& key){
+    return std::hash<string>()(key) %SIZE;
 }
 
 void insert(string& key, string& val){
 
+}
+string getValueByKey(string& key){
+    auto hashCode = hash_(key);
 }
