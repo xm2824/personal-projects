@@ -44,7 +44,7 @@ void ListEntry::createSM(Shared** a,string value)  {
 
 inline void ListEntry::closeSM() const  {
     shm_unlink(this->key.c_str());
-    cout<<"removed"<<endl;
+    cout<<"SYSTEM: ListEntry object removed..."<<endl;
 }
 
  void ListEntry::addNext(string next_key,string val) {

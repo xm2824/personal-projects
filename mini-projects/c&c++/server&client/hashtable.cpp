@@ -22,6 +22,7 @@ void insertKeyValue(const string& key2, const string& val, ListEntry *hashTable)
     }
     // key not existed yet
     tmp->addNext(key2,val);
+    cout<<"SYSTEM: key-value pair inserted..."<<endl;
 
 }
 string getValueByKey(const string& key2, ListEntry* hashtable){
@@ -33,5 +34,27 @@ string getValueByKey(const string& key2, ListEntry* hashtable){
             return tmp->readValue();
         }
     }
-    return "???:this key doesn't exist";
+    return "ERROR: this key doesn't exist...";
+}
+
+void deleteKeyValue(const string& key2, ListEntry *hashTable)
+{
+    auto hashCode = hash_(key2);
+    auto tmp = hashTable + hashCode;
+    while (tmp->next){
+        if(tmp->next->key==key2){
+            auto prev = tmp;
+            tmp=tmp->next;
+            auto nextEntry = tmp->next;
+            prev->next = nextEntry;
+
+            delete tmp;
+            cout<<"SYSTEM: Key-value pair deleted..."<<endl;
+            return;
+        }
+        else{
+            tmp = tmp->next;
+        }
+    }
+    cout<<"SYSTEM: Key doesn't exist, deletion aborts..."<<endl;
 }

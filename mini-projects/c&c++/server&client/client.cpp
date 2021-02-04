@@ -39,8 +39,53 @@ int main()
     close(shmFd);
 
 
-    insertKeyValue("dsf","value1",hashTable);
-    cout << getValueByKey( "dsf", hashTable) << endl;
+    /* interactive */
+    cout<<"Welcome!"<<endl;
+    string help = "Usage:\ninsert <key> <value>\t\tadd a new k-v pair\n"
+                  "read   <key>        \t\tread the value of corresponding key\n"
+                  "delete <key>        \t\tdelete k-v pair\n"
+                  "exit                \t\texit the program\n";
+    cout<<help<<endl;
+    string input;
+    getline(cin,input);
+    while (input!="exit"){
+        // read
+        if (stringBeginsWith(input,"read")){
+            std::string delimiter = " ";
+            size_t pos = 0;
+            std::string token;
+            int count = 0;
+            while ((pos = input.find(delimiter)) != std::string::npos) {
+                token = input.substr(0, pos);
+                std::cout << token << std::endl;
+                input.erase(0, pos + delimiter.length());
+                count ++;
+                if(count==2){
+                    break;
+                }
+            }
+            cout<<getValueByKey(token,hashTable);
+
+        }
+
+        // insert
+        else if (stringBeginsWith(input,"insert")){
+
+        }
+
+        // delete
+        else if (stringBeginsWith(input,"delete")){
+
+        }
+
+        // help
+        else{
+            cout<<help<<endl;
+        }
+        getline(cin,input);
+    }
+
+
 
 
 

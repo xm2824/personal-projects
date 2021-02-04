@@ -12,3 +12,7 @@ void err_quit(const char *fmt)
     fprintf(stderr,"%s\n", fmt);
     exit(EXIT_FAILURE);
 }
+
+bool stringBeginsWith(const string& str, const string& substr){
+    return str.rfind(substr,0)==0;
+}

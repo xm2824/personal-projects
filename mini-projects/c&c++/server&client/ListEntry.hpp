@@ -6,6 +6,7 @@
 #define SERVER_CLIENT_LISTENTRY_HPP
 #include <string>
 #include "common.hpp"
+#include "shared.hpp"
 
 using namespace std;
 class ListEntry{
@@ -26,5 +27,7 @@ public:
     void deleteSelf() const;
     ListEntry();
     ~ListEntry();
+
+
 };
 #endif //SERVER_CLIENT_LISTENTRY_HPP

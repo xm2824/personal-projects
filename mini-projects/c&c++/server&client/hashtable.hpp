@@ -11,4 +11,5 @@ using namespace std;
 unsigned long hash_(const string& key);
 void insertKeyValue(const string& key2, const string& val, ListEntry *hashTable);
 string getValueByKey(const string& key2, ListEntry* hashtable);
+void deleteKeyValue(const string& key2, ListEntry *hashTable);
 #endif //SERVER_CLIENT_HASHTABLE_HPP
