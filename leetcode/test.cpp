@@ -5,19 +5,19 @@ using namespace std;
 
 // Comparator function to sort pairs 
 // according to second value 
-bool cmp(pair<string, int>& a, 
-		pair<string, int>& b) 
+bool cmp(pair<char, int>& a, 
+		pair<char, int>& b) 
 { 
 	return a.second < b.second; 
 } 
 
 // Function to sort the map according 
 // to value in a (key-value) pairs 
-void sort(map<string, int>& M) 
+void sort_(map<char, int>& M) 
 { 
 
 	// Declare vector of pairs 
-	vector<pair<string, int> > A; 
+	vector<pair<char, int> > A; 
 
 	// Copy key-value pair from Map 
 	// to vector of pairs 
@@ -41,14 +41,14 @@ int main()
 { 
 
 	// Declare Map 
-	map<string, int> M; 
+	map<char, int> M; 
 
 	// Given Map 
-	M = { { "GfG", 3 }, 
-		{ "To", 2 }, 
-		{ "Welcome", 1 } }; 
+	M = { { 'G', 3 }, 
+		{ 'T', 2 }, 
+		{ 'W', 1 } }; 
 
 	// Function Call 
-	sort(M); 
+	sort_(M); 
 	return 0; 
 } 

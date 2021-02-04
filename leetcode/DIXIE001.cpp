@@ -1,38 +1,46 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
+
+
 // Comparator function to sort pairs 
 // according to second value 
-bool cmp(pair<string, int>& a, 
-         pair<string, int>& b) 
+bool cmp(pair<char, int>& a, 
+		pair<char, int>& b) 
 { 
-    return a.second < b.second; 
+    if(a.second<b.second) return true;
+    else if (a.second=b.second)
+    {
+        return a.first<b.first;
+    }
+    else return false;
+    
 } 
-  
+
 // Function to sort the map according 
 // to value in a (key-value) pairs 
-// void sort_(unordered_map<char, int>& M) 
-// { 
-  
-//     // Declare vector of pairs 
-//     vector<pair<char, int> > A; 
-  
-//     // Copy key-value pair from Map 
-//     // to vector of pairs 
-//     for (auto& it : M) { 
-//         A.push_back(it); 
-//     } 
-  
-//     // Sort using comparator function 
-//     sort(A.begin(), A.end(), cmp); 
-  
-//     // Print the sorted value 
-//     for (auto& it : A) { 
-  
-//         cout << it.first << ' '
-//              << it.second << endl; 
-//     } 
-// } 
+void sort_(unordered_map<char, int>& M) 
+{ 
+
+	// Declare vector of pairs 
+	vector<pair<char, int> > A; 
+
+	// Copy key-value pair from Map 
+	// to vector of pairs 
+	for (auto& it : M) { 
+		A.push_back(it); 
+	} 
+
+	// Sort using comparator function 
+	sort(A.begin(), A.end(), cmp); 
+
+	// // Print the sorted value 
+	// for (auto& it : A) { 
+
+	// 	cout << it.first << ' '
+	// 		<< it.second << endl; 
+	// } 
+} 
 
 void printFrequency(string str,unordered_map<char,int>& M)
 {
@@ -60,11 +68,11 @@ void printFrequency(string str,unordered_map<char,int>& M)
         }
     }
  
-    // Traverse the map to print the
-    // frequency
-    for (auto& it : M) {
-        cout << it.first << ' ' << it.second << '\n';
-    }
+    // // Traverse the map to print the
+    // // frequency
+    // for (auto& it : M) {
+    //     cout << it.first << ' ' << it.second << '\n';
+    // }
 }
 
 int main() {
@@ -92,8 +100,14 @@ int main() {
     unordered_map<char,int> M;
     printFrequency(input,M);
 
-    cout<<"after sorted:\n";
-    // sort_(M);
+    // cout<<"after sorted:\n";
+    sort_(M);
+    int size = M.size();
+
+    std::vector<char> key;
+    for(unordered_map<char,int>::iterator it = M.begin(); it != M.end(); ++it) {
+        key.push_back(it->first);
+}
     
     
     
