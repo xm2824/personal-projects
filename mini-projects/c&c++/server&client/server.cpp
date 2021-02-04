@@ -63,22 +63,22 @@ int main(int argc, char *argv[])
 
 
     /* pointer to shared memory obect */
-    auto array = (ListEntry*)mmap(nullptr, SIZE*sizeof(ListEntry), PROT_READ|PROT_WRITE, MAP_SHARED, shm_fd, 0);
-    if (MAP_FAILED == array)
+    auto hashTable = (ListEntry*)mmap(nullptr, SIZE * sizeof(ListEntry), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+    if (MAP_FAILED == hashTable)
     {
         err_quit("mmap failed.");
     }
     close(shm_fd);
     for (int i = 0; i < SIZE; ++i) {
-        new(array+i) ListEntry();
+        new(hashTable + i) ListEntry();
     }
 
 
 
-    array->addNext("wwaawwwwaa",  "1");
-    cout<<array->next->readValue()<<endl;
-    array->next->writeValue("hladsf");
-    cout<<array->next->readValue()<<endl;
+//    hashTable->addNext("wwaawwwwaa", "1");
+//    cout << hashTable->next->readValue() << endl;
+//    hashTable->next->writeValue("hladsf");
+//    cout << hashTable->next->readValue() << endl;
 
 
     return 0;

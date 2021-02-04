@@ -9,12 +9,5 @@
 #include <string>
 
 using namespace std;
-class HashTable{
-private:
-    vector<forward_list<string>>* table;
 
-public:
-    HashTable();
-    int getSize();
-};
 #endif //SERVER_CLIENT_HASHTABLE_HPP
